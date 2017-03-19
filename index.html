@@ -587,8 +587,9 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
 
   </table>
 
-<p><strong>Since there are several categories in restaurants, we will focus only on the top 10 most frequent categories.</strong></p>
+<p><strong>RESTAURANTS:</strong></p>
 
+<p><strong>Since there are several categories in restaurants, we will focus only on the top 10 most frequent categories.</strong></p>
 
 
     <a href="https://plot.ly/~stephanielam/50/?share_key=cOiKyLK49MCvA7nM6d4T7X" target="_blank" title="Top 10 most frequent category of Restaurant" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/50.png?share_key=cOiKyLK49MCvA7nM6d4T7X" alt="Top 10 most frequent category of Restaurant" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
@@ -614,9 +615,29 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
 <img src="img/part2.png" alt="Top 3 restaurants by category" style="width:304px;height:228px;">
 <img src="img/part2b.png" alt="Top 3 restaurants by category (cont.)" style="width:304px;height:228px;">
 
-<p><strong>For example: Image of the top 3 Mexican restaurants:</strong>
+<p><strong>For example: Image of the top 3 Mexican restaurants.</strong>
 
-<img src="img/top3rest.png" alt="Top 3 Mexican restaurants" style="width:206px;height:600px;">
+<img src="img/top3rest.png" alt="Top 3 Mexican restaurants" style="width:160px;height:500px;">
+
+<p><strong>HOTELS:</strong></p>
+
+<img src="img/part2_hotel.png" alt="Hotel dataframe" style="width:304px;height:228px;">
+<img src="img/part2_hotelb.png" alt="Hotel dataframe(cont.)" style="width:304px;height:228px;">
+
+<p><strong>From the dataframe we got from yelp, we see that the Hotel category doesn't contain much variety in terms of category. For better analysis of the hotel data, we will first restrict the data to those that are indeed hotels, and look at the pie chart of the star distribution and map of average rating in each city</strong></p>
+
+<p><strong>Pie chart of star distribution of hotels</strong>
+
+    <a href="https://plot.ly/~stephanielam/62/?share_key=RMMeA9jBcHukLlwssHugku" target="_blank" title="star distribution in the category Hotels" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/62.png?share_key=RMMeA9jBcHukLlwssHugku" alt="star distribution in the category Hotels" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="stephanielam:62" sharekey-plotly="RMMeA9jBcHukLlwssHugku" src="https://plot.ly/embed.js" async></script>
+
+<p><strong>From the pie chart, we see that the majority of hotels are between 3 to 4 stars. There is only 3% of hotels that are rated 5 stars while 26.7% of the hotels have 3.5 stars.</strong>
+
+<p><strong> COMPARING HOTELS AND RESTAURANTS: Compared to the restaurants category, there are actually quite a lot of cities that have average hotel ratings between 1 and 3 stars. Sometimes even though the city has a average 4.5 rating, there might be just one hotel in the city. For example: In Exeter, there might just be one hotel but the average review count is only 14 (very low). On the other hand, the hotels in Palm Springs is very nice because the average review count is very high. </strong></p>
+
+<p><strong>To find the top hotels in California, we wanted the user to be able to look at the top of different kinds of hotels such as hotel, motel, inn, etc. Therefore, we group the hotels into different categories by finding the patterns within their names.</strong></p>
+
+
 
     <a href="https://plot.ly/~stephanielam/52/?share_key=HvY2lctq8HfR2H5egYViIy" target="_blank" title="Rating stars distribution (by categeory)" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/52.png?share_key=HvY2lctq8HfR2H5egYViIy" alt="Rating stars distribution (by categeory)" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:52" sharekey-plotly="HvY2lctq8HfR2H5egYViIy" src="https://plot.ly/embed.js" async></script>
