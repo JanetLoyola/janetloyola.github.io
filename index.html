@@ -815,258 +815,57 @@ We are sorry. We can not find a result that meets your criterias in our database
    <h1>PART 4: Review Analysis</h1>
 </header>
 
-<p><strong> ASK CHLOE!!!</strong></p>
+<p><strong> Goal: Analyze the reviews from the Yelp API and find the common words that are used in the review.</strong></p>
 
-<table>
-  <tr>
-    <th>business_id</th>
-    <th>cool</th>
-    <th>date</th>
-    <th>funny</th>
-    <th>review_id</th>
-    <th>stars</th>
-    <th>text</th>
-    <th>type</th>
-    <th>useful</th>
-    <th>user_id</th>
-  </tr>
+<p><strong>STEPS:</strong>
+    <ul>
+        <li><strong>Create functions to do natural language processing and create graphs.</strong>
+        </li>
+        <li><strong>Analyze each table in the accommodation database</strong></li>
+</p>
 
-    <tr>
-    <th>2aFiy99vNLklCx3T_tGS9A</th>
-    <th>0</th>
-    <th>2011-10-10</th>
-    <th>0</th>
-    <th>NxL8SIC5yqOdnlXCg18IBg</th>
-    <th>5</th>
-    <th>If you enjoy service by someone who is as comp...</th>
-    <th>review</th>
-    <th>0</th>
-    <th>KpkOkG6RIf4Ra25Lhhxf1A</th>
-  </tr>
+<p><strong>Review Analysis For Best Rated Nearby Restaurants, Hotels, Landmarks for all the cities in California</strong>
 
-    <tr>
-    <th>2LfIuF3_sX6uwe-IR-P0jQ</th>
-    <th>1</th>
-    <th>2014-07-14</th>
-    <th>0</th>
-    <th>GP6YEearUWrzPtQYSF1vVg</th>
-    <th>5</th>
-    <th>Highly recommended. Went in yesterday looking ...</th>
-    <th>review</th>
-    <th>0</th>
-    <th>aW3ix1KNZAvoM8q-WghA3Q</th>
-  </tr>
+<p><strong>Graphs for restaurants.</strong>
 
-    <tr>
-    <th>2LfIuF3_sX6uwe-IR-P0jQ</th>
-    <th>0</th>
-    <th>2014-01-15</th>
-    <th>0</th>
-    <th>25RlYGq2s5qShi-pn3ufVA</th>
-    <th>4</th>
-    <th>I walked in here looking for a specific piece ...</th>
-    <th>review</th>
-    <th>0</th>
-    <th>YOo-Cip8HqvKp_p9nEGphw</th>
-  </tr>
+<img src="img/part4_rest.png" alt="Number of counts of most occurring words in restaurants" style="width:304px;height:228px;">
+<img src="img/part4_restb.png" alt="Most commonly occurring words in restaurants" style="width:304px;height:228px;">
 
-    <tr>
-    <th>2aFiy99vNLklCx3T_tGS9A</th>
-    <th>0</th>
-    <th>2010-12-29</th>
-    <th>0</th>
-    <th>pXbbIgOXvLuTi_SPs1hQEQ</th>
-    <th>5</th>
-    <th>After being on the phone with Verizon Wireless...</th>
-    <th>review</th>
-    <th>0</th>
-    <th>bQ7fQq1otn9hKX-gXRsrgA</th>
-  </tr>
-</table>
+<p><strong>Restaurants Analysis:</strong>
+<ul>
+        <li>The restaurants with higher rating tend to have greater food quality, more friendly customer service and great time management</li>
+        <li>Chicken seems to be popular in the high rated restaurants.</li>
+</p>
 
-<p><strong> ASK CHLOE!!!</strong></p>
+<p><strong>Graphs for hotels.</strong>
 
-<table>
-  <tr>
-    <th>address</th>
-    <th>attributes</th>
-    <th>business_id</th>
-    <th>categories</th>
-    <th>city</th>
-    <th>hours</th>
-    <th>is_open</th>
-    <th>latitude</th>
-    <th>longitude</th>
-    <th>name</th>
-    <th>postal_code</th>
-    <th>review_count</th>
-    <th>stars</th>
-    <th>state</th>
-    <th>type</th>
-  </tr>
+<img src="img/part4_hotel.png" alt="Number of counts of most occurring wordsin hotels" style="width:304px;height:228px;">
+<img src="img/part4_hotelb.png" alt="Most commonly occurring words in hotels" style="width:304px;height:228px;">
 
-  <tr>
-    <th>227 E Baseline Rd, Ste J2</th>
-    <th>[BikeParking: True, BusinessAcceptsBitcoin: Fa...</th>
-    <th>0DI8Dt2PJp07XkVvIElIcQ</th>
-    <th>[Tobacco Shops, Nightlife, Vape Shops, Shopping]</th>
-    <th>Tempe</th>
-    <th>[Monday 11:0-21:0, Tuesday 11:0-21:0, Wednesda...</th>
-    <th>0</th>
-    <th>33.378214</th>
-    <th>-111.936102</th>
-    <th>Innovative Vapors</th>
-    <th>85283</th>
-    <th>17</th>
-    <th>4.5</th>
-    <th>AZ</th>
-    <th>business</th>
-  </tr>
+<p><strong>Hotels Analysis:</strong>
+<ul>
+        <li>The hotels with higher ratings tends to provide a cleaner environment, and more friendly customer service.</li>
+        <li>The customers also discuss the breakfast quality more often than other meals.</li>
+</p>
 
-  <tr>
-    <th>495 S Grand Central Pkwy</th>
-    <th>[BusinessAcceptsBitcoin: False, BusinessAccept...</th>
-    <th>LTlCaCGZE14GuaUXUGbamg</th>
-    <th>[Caterers, Grocery, Food, Event Planning and Ser...</th>
-    <th>Las Vegas</th>
-    <th>Monday 0:0-0:0, Tuesday 0:0-0:0, Wednesday 0:...</th>
-    <th>1</th>
-    <th>36.192284</th>
-    <th>-115.159272</th>
-    <th>Cut and Taste</th>
-    <th>89106</th>
-    <th>9</th>
-    <th>5.0</th>
-    <th>NV</th>
-    <th>business</th>
-  </tr>
 
-  <tr>
-    <th>7014 Steubenville Pike</th>
-    <th>[AcceptsInsurance: False, BusinessAcceptsCredi...</th>
-    <th>cnGIivYRLxpF7tBVR_JwWA</th>
-    <th>[Hair Removal, Beauty and Spas, Blow Dry/Out Ser...</th>
-    <th>Oakdale</th>
-    <th>[Tuesday 10:0-21:0, Wednesday 10:0-21:0, Thurs...</th>
-    <th>1</th>
-    <th>40.444544</th>
-    <th>-80.174540</th>
-    <th>Plush Salon and Spa</th>
-    <th>15071</th>
-    <th>4</th>
-    <th>4.0</th>
-    <th>PA</th>
-    <th>business</th>
-  </tr>
-</table>
+<p><strong>Graphs for landmarks.</strong>
 
->>> final_df[1:3]
-                     address  \
-1  227 E Baseline Rd, Ste J2   
-2  227 E Baseline Rd, Ste J2   
 
-                                          attributes             business_id  \
-1  [BikeParking: True, BusinessAcceptsBitcoin: Fa...  0DI8Dt2PJp07XkVvIElIcQ   
-2  [BikeParking: True, BusinessAcceptsBitcoin: Fa...  0DI8Dt2PJp07XkVvIElIcQ   
+<img src="img/part4_landmarks.png" alt="Number of counts of most occurring words in landmarks" style="width:304px;height:228px;">
+<img src="img/part4_landmarksb.png" alt="Most commonly occurring words in landmarks" style="width:304px;height:228px;">
 
-                                         categories   city  \
-1  [Tobacco Shops, Nightlife, Vape Shops, Shopping]  Tempe   
-2  [Tobacco Shops, Nightlife, Vape Shops, Shopping]  Tempe   
-
-                                               hours  is_open   latitude  \
-1  [Monday 11:0-21:0, Tuesday 11:0-21:0, Wednesda...        0  33.378214   
-2  [Monday 11:0-21:0, Tuesday 11:0-21:0, Wednesda...        0  33.378214   
-
-    longitude               name           ...              type_x cool  \
-1 -111.936102  Innovative Vapors           ...            business    0   
-2 -111.936102  Innovative Vapors           ...            business    0   
-
-         date  funny               review_id stars_y  \
-1  2014-03-29      1  _GuozPXPqAdy9k5UBAQBgg       5   
-2  2014-03-31      1  Dft1srk29JfGhV189-u0dQ       5   
-
-                                                text  type_y  useful  \
-1  This place is great! Not only can you get tons...  review       0   
-2  There are a lot of "Vapor Lounges" in the area...  review       0   
-
-                  user_id  
-1  cK78PTjb65kdmRL9BnEdoQ  
-2  efaUGV60LFI4v6bWPhzL-A  
-
+p><strong>Landmarks Analysis:</strong>
+<ul>
+        <li>The landmarks with higher ratings tends to have a great and beautiful environment, and an amazing view.</li>
+        <li>Some examples of landmarks are parks and historic landmarks.</li>
+</p>
 
 
 </div>
 
-    <div class="container">
+    
 
-<header>
-   <h1>SFO</h1>
-</header>
-  
-<nav>
-  <img src="img/sf.png" alt="SFO",style="width:250px;height:128px;">
-</nav>
-
-<article>
-  <h1>SFO</h1>
-  <p>San Francisco (SF) (/sæn frənˈsɪskoʊ/) (Spanish for Saint Francis) officially the City and County of San Francisco, is the cultural, commercial, and financial center of Northern California. It is the birthplace...</p>
-  <p>Standing on the River Thames, London has been a major settlement for two millennia, its history going back to its founding by the Romans, who named it Londinium.</p>
-</article>
-
-
-
-</div>
-
-    <div class="row">
-            <div class="col-lg-12">
-                <h1 class="page-header">
-                    Welcome to Modern Business
-                </h1>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-check"></i> Bootstrap v3.3.7</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            <div class="col-md-4">
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4><i class="fa fa-fw fa-gift"></i> Free &amp; Open Source</h4>
-                    </div>
-                    <div class="panel-body">
-                        <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Itaque, optio corporis quae nulla aspernatur in alias at numquam rerum ea excepturi expedita tenetur assumenda voluptatibus eveniet incidunt dicta nostrum quod?</p>
-                        <a href="#" class="btn btn-default">Learn More</a>
-                    </div>
-                </div>
-            </div>
-            
-        </div>
-        
-
-            <div class="post-preview">
-                    <a href="post.html">
-                        <h2 class="post-title">
-                            Man must explore, and this is exploration at its greatest
-                        </h2>
-                        <h3 class="post-subtitle">
-                            Problems look mighty small from 150 miles up
-                        </h3>
-                    </a>
-                    
-                </div>
-    <!-- /.container -->
-
-    <!-- jQuery Version 1.11.1 -->
-    <script src="js/jquery.js"></script>
-
-    <!-- Bootstrap Core JavaScript -->
-    <script src="js/bootstrap.min.js"></script>
 
 </body>
 
