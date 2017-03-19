@@ -70,7 +70,7 @@ def recommend_res(city, res_cat, res_rating):
 	print "You enter City: %s, Restaurant Category: %s, Lower_bound Rating: %s, Upper_bound Rating: %s\n" %(visit_city, res_cat, rat_1, rat_2)
 	conn = sql.connect("accommodation.sqlite")
 	res_sql = '''SELECT categories, city, name, rating, review_count, snippet_text,url FROM Best_Restaurants WHERE city = '%s' 
-	                AND categories = '%s' AND rating BETWEEN '%s' AND '%s' ''' %(visit_city, res_cat, rat_1, rat_2)
+				AND categories = '%s' AND rating BETWEEN '%s' AND '%s' ''' %(visit_city, res_cat, rat_1, rat_2)
 	restaurants = pd.read_sql(res_sql, conn)
 
 	res_sql_alternative = '''SELECT categories, city, name, rating, review_count, snippet_text,url FROM Best_Restaurants WHERE city = '%s' AND rating BETWEEN '%s' AND '%s' LIMIT 5''' %(visit_city, rat_1, rat_2)
@@ -148,20 +148,13 @@ def ask_input():
     return output
 
 def verify_satisfaction():
-    """
-    verify whether the users are satisfied with the results
-    
-    Argument: None
-    
-    Return: ask_input() function
-    """
-    satisfied = raw_input("Are you satisfied with the results? \n")
+	satisfied = raw_input("Are you satisfied with the results? \n")
 
-    if satisfied.title() in "Yes":
-        print ("Thanks for using our system. We wish you have a wonderful trip.\n")
-    else:
-        print("Ok, let's try again.\n")
-        return ask_input()
+	if satisfied.title() in "Yes":
+		print ("Thanks for using our system. We wish you have a wonderful trip.\n")
+	else:
+		print("Ok, let's try again.\n")
+		return ask_input()
 
 ask_input()
 

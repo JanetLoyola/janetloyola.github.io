@@ -587,18 +587,36 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
 
   </table>
 
+<p><strong>Since there are several categories in restaurants, we will focus only on the top 10 most frequent categories.</strong></p>
 
 
-    <a href="https://plot.ly/~stephanielam/80/?share_key=dMfCwLuOPNE3wixUbsDoCq" target="_blank" title="Top 10 most frequent category of Nightlife" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/80.png?share_key=dMfCwLuOPNE3wixUbsDoCq" alt="Top 10 most frequent category of Nightlife" style="max-width: 80%;width: 400px;"  width="400" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="stephanielam:80" sharekey-plotly="dMfCwLuOPNE3wixUbsDoCq" src="https://plot.ly/embed.js" async></script>
+
+    <a href="https://plot.ly/~stephanielam/50/?share_key=cOiKyLK49MCvA7nM6d4T7X" target="_blank" title="Top 10 most frequent category of Restaurant" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/50.png?share_key=cOiKyLK49MCvA7nM6d4T7X" alt="Top 10 most frequent category of Restaurant" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="stephanielam:50" sharekey-plotly="cOiKyLK49MCvA7nM6d4T7X" src="https://plot.ly/embed.js" async></script>
+
+<p><strong> From this bar plot, we can see that Mexican food is the most popular cuisine. </strong></p>
+
+<p><strong> Now, we need a plot to see how these categories are distributed in different ratings.</strong></p>
 
 
     <a href="https://plot.ly/~stephanielam/54/?share_key=PKHXLPn4XduN79K2swuTK4" target="_blank" title="Restaurant average rating by city" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/54.png?share_key=PKHXLPn4XduN79K2swuTK4" alt="Restaurant average rating by city" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:54" sharekey-plotly="PKHXLPn4XduN79K2swuTK4" src="https://plot.ly/embed.js" async></script>
 
+<p><strong>We see that most of the restaurants have 4 stars rating or higher. Hence, we can tell that CA has pretty posh restaurants overall. </strong></p>
 
-    <a href="https://plot.ly/~stephanielam/82/?share_key=Qdx6T05Qv3ar4Z7Jonl4cH" target="_blank" title="nightlife average rating by city" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/82.png?share_key=Qdx6T05Qv3ar4Z7Jonl4cH" alt="nightlife average rating by city" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="stephanielam:82" sharekey-plotly="Qdx6T05Qv3ar4Z7Jonl4cH" src="https://plot.ly/embed.js" async></script>
+    <a href="https://plot.ly/~stephanielam/54/?share_key=PKHXLPn4XduN79K2swuTK4" target="_blank" title="Restaurant average rating by city" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/54.png?share_key=PKHXLPn4XduN79K2swuTK4" alt="Restaurant average rating by city" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="stephanielam:54" sharekey-plotly="PKHXLPn4XduN79K2swuTK4" src="https://plot.ly/embed.js" async></script>
+
+<p><strong>In this map, the bigger dots indicate higher average review count. We see that most of the restaurants in different cities are between 4 and 4.5 stars. Also, there is currently no city that has a average rating higher than 4.5.</strong></p>
+
+<p><strong>Now we create a dataframe of the top 3 restaurants of that particular cuisine in CA.</strong>
+
+<img src="img/part2.png" alt="Top 3 restaurants by category" style="width:304px;height:228px;">
+<img src="img/part2b.png" alt="Top 3 restaurants by category (cont.)" style="width:304px;height:228px;">
+
+<p><strong>For example: Image of the top 3 Mexican restaurants:</strong>
+
+<img src="img/top3rest.png" alt="Top 3 Mexican restaurants" style="width:304px;height:228px;">
 
     <a href="https://plot.ly/~stephanielam/52/?share_key=HvY2lctq8HfR2H5egYViIy" target="_blank" title="Rating stars distribution (by categeory)" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/52.png?share_key=HvY2lctq8HfR2H5egYViIy" alt="Rating stars distribution (by categeory)" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:52" sharekey-plotly="HvY2lctq8HfR2H5egYViIy" src="https://plot.ly/embed.js" async></script>
