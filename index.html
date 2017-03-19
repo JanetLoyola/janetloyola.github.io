@@ -633,24 +633,29 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
 
 <p><strong>From the pie chart, we see that the majority of hotels are between 3 to 4 stars. There is only 3% of hotels that are rated 5 stars while 26.7% of the hotels have 3.5 stars.</strong>
 
-<p><strong> COMPARING HOTELS AND RESTAURANTS: Compared to the restaurants category, there are actually quite a lot of cities that have average hotel ratings between 1 and 3 stars. Sometimes even though the city has a average 4.5 rating, there might be just one hotel in the city. For example: In Exeter, there might just be one hotel but the average review count is only 14 (very low). On the other hand, the hotels in Palm Springs is very nice because the average review count is very high. </strong></p>
+<p><strong> COMPARING HOTELS AND RESTAURANTS: Compared to the restaurants category, there are actually quite a lot of cities that have average hotel ratings between 1 and 3 stars. Sometimes even though the city has a average 4.5 rating, there might be just one hotel in the city. For example: In Exeter, there might just be one hotel but the average review count is only 14 (very low). On the other hand, the hotels in Palm Springs is very nice because the average review count is very high. We see that both in the restaurant and hotels category, the top restaurants and hotels are located near San Francisco and LA-SD area. </strong></p>
 
 <p><strong>To find the top hotels in California, we wanted the user to be able to look at the top of different kinds of hotels such as hotel, motel, inn, etc. Therefore, we group the hotels into different categories by finding the patterns within their names.</strong></p>
 
 
+<p><strong>LANDMARKS:</strong></p>
 
-    <a href="https://plot.ly/~stephanielam/52/?share_key=HvY2lctq8HfR2H5egYViIy" target="_blank" title="Rating stars distribution (by categeory)" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/52.png?share_key=HvY2lctq8HfR2H5egYViIy" alt="Rating stars distribution (by categeory)" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="stephanielam:52" sharekey-plotly="HvY2lctq8HfR2H5egYViIy" src="https://plot.ly/embed.js" async></script>
+<p><strong>From the pie chart, most landmarks seem to have high ratings ranging from 4 to 5 stars.</strong></p>
+    <a href="https://plot.ly/~stephanielam/72/?share_key=mhmxC6NojzPfwOjbgarPrK" target="_blank" title="star distribution in the category Landmarks" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/72.png?share_key=mhmxC6NojzPfwOjbgarPrK" alt="star distribution in the category Landmarks" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="stephanielam:72" sharekey-plotly="mhmxC6NojzPfwOjbgarPrK" src="https://plot.ly/embed.js" async></script>
 
-    <a href="https://plot.ly/~stephanielam/92/?share_key=AfHJE5iyESkFVLzfBsUQcy" target="_blank" title="Top 5 restaurant by category" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/92.png?share_key=AfHJE5iyESkFVLzfBsUQcy" alt="Top 5 restaurant by category" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="stephanielam:92" sharekey-plotly="AfHJE5iyESkFVLzfBsUQcy" src="https://plot.ly/embed.js" async></script>
+<p><strong>landmarks dataframe</strong>
+<img src="img/landmarks.png" alt="Hotel dataframe" style="width:304px;height:228px;">
+<p><strong>Since we focused on only the landmarks and historical buildings category and there is no pattern in their names, we will find and plot the top 10 landmarks in California instead.</strong>
+
+<img src="img/part2_landmarks.png" alt="Top 10 landmarks dataframe" style="width:304px;height:228px;">
+<img src="img/part2_landmarksb.png" alt="Top 10 landmarks dataframe(cont.)" style="width:304px;height:228px;">
 
 
-    <a href="https://plot.ly/~stephanielam/62/?share_key=RMMeA9jBcHukLlwssHugku" target="_blank" title="star distribution in the category Hotels" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/62.png?share_key=RMMeA9jBcHukLlwssHugku" alt="star distribution in the category Hotels" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="stephanielam:62" sharekey-plotly="RMMeA9jBcHukLlwssHugku" src="https://plot.ly/embed.js" async></script>
+    <a href="https://plot.ly/~stephanielam/100/?share_key=6Z1se5qoAFJNpk6lLZyvQn" target="_blank" title="Top 10 Landmarks" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/100.png?share_key=6Z1se5qoAFJNpk6lLZyvQn" alt="Top 10 Landmarks" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
+    <script data-plotly="stephanielam:100" sharekey-plotly="6Z1se5qoAFJNpk6lLZyvQn" src="https://plot.ly/embed.js" async></script>
 
-    <a href="https://plot.ly/~stephanielam/56/?share_key=W9JXE7f1RxulV7C2DTTLvw" target="_blank" title="Scatter plot of rating vs review count for Restaurant" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/56.png?share_key=W9JXE7f1RxulV7C2DTTLvw" alt="Scatter plot of rating vs review count for Restaurant" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
-    <script data-plotly="stephanielam:56" sharekey-plotly="W9JXE7f1RxulV7C2DTTLvw" src="https://plot.ly/embed.js" async></script>
+<p><strong>This landmarks category is different from the restaurant and hotel category because out of the top 10 landmarks, half of them are located in San Francisco while Los Angeles does not have any.</strong>
 
 </div>
 
