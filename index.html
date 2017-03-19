@@ -116,7 +116,7 @@ tr:nth-child(even) {
 <p>Undergrad student at UC Davis majoring in Computational Statistics.</p>
 <a href="mailto:jloyola@ucdavis.edu" class="author-social" target="_blank"><i class="fa fa-envelope-square"></i> Email</a>
 
-<a href="https://github.com/chloechen1995/STA-141B-Project" class="author-social" target="_blank"><i class="fa fa-github"></i> Github</a>
+<a href="https://github.com/chloechen1995/STA-141B-Project" class="author-social" target="_blank"><i class="fa fa-github"></i> STATS 141B FINAL PROJECT CODE APPENDIX (GITHUB)</a>
 
 
 
@@ -201,7 +201,7 @@ tr:nth-child(even) {
         <div class="row">
             <div class="col-lg-12 text-center">
                 <h1 id="141bproj">STATS 141B FINAL PROJECT</h1>
-                <p class="lead">Provide best landmarks, restaurants, hotels, and nightlife for the specific place!</p>
+                <p class="lead">Provide best landmarks, restaurants,and hotels for the specific place!</p>
                 <img src="img/hotel.png" alt="Hotel" style="width:304px;height:228px;">
                 <img src="img/sf.png" alt="SFO" style="width:304px;height:228px;">
                 <img src="img/food.png" alt="Food" style="width:304px;height:228px;">
@@ -228,7 +228,7 @@ tr:nth-child(even) {
                 <p>We followed these steps by breaking this project into four parts.
                 <ul>
                  <li><strong>Data Wrangling </strong></li>
-                 <li><strong>Analyzing data and plotting </strong></li>
+                 <li><strong>Query Database and Graphs </strong></li>
                  <li><strong>Getting basic information of each city </strong></li>
                  <li><strong>Analyzing the review content </strong></li>
                  </p></ul>
@@ -243,7 +243,11 @@ tr:nth-child(even) {
 </header>
 
 <p><strong>We extracted the city and population from the Wikipedia URL related to list of cities and towns in CA.
-Goal: Extract data from the Yelp API, clean up the data and create tables for the best(highest_rated and near highest_rated) restaurants, hotels and landmarks. </strong></p>
+</strong></p>
+
+<p><strong>
+Goal: Extract data from the Yelp API, clean up the data and create tables for the best(highest_rated and near highest_rated) restaurants, hotels and landmarks.
+</strong></p>
 
 <p><strong>STEPS:</strong>
     <ul>
@@ -252,6 +256,7 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
         <li><strong>Analyze each table in the accommodation database.</strong></li>
 </strong></p>
 
+<p><strong>Extracted city and population from Wikipedia page.</strong>
   <table>
   <tr>
     <th>City</th>
@@ -451,14 +456,16 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
    <h1>PART 2: Query Database and Graphs</h1>
 </header>
 
-<p><strong> Goal: create different plots for analysis for categories- restaurants, hotels, and landmarks</strong></p>
+<p><strong> 
+Goal: create different plots for analysis for categories- restaurants, hotels, and landmarks
+</strong></p>
 
 <p><strong>STEPS:</strong>
     <ul>
-        <li><strong>Create functions to extract infomation that we need</strong>
+        <li><strong>Create functions to extract infomation that we need.</strong>
         </li>
-        <li><strong>Use plotly to make interactive plots so that users can look at the plots more specifically</strong></li>
-        <li><strong>use map to display the top restaurants/hotels/landmarks</strong></li>
+        <li><strong>Use plotly to make interactive plots so that users can look at the plots more specifically.</strong></li>
+        <li><strong>Use map to display the top restaurants/hotels/landmarks.</strong></li>
 </strong></p>
 
 <p><strong>STEP 1:</strong>
@@ -624,9 +631,8 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
 <p><strong>From the pie chart, most landmarks seem to have high ratings ranging from 4 to 5 stars.</strong></p>
     <a href="https://plot.ly/~stephanielam/72/?share_key=mhmxC6NojzPfwOjbgarPrK" target="_blank" title="star distribution in the category Landmarks" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/72.png?share_key=mhmxC6NojzPfwOjbgarPrK" alt="star distribution in the category Landmarks" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:72" sharekey-plotly="mhmxC6NojzPfwOjbgarPrK" src="https://plot.ly/embed.js" async></script>
-
-<p><strong>landmarks dataframe</strong>
-<img src="img/landmarks.png" alt="Hotel dataframe" style="width:304px;height:228px;">
+    
+<img src="img/landmarks.png" alt="Hotel dataframe" style="width:304px;height:228px;"><h1>Landmarks dataframe</h1>
 <p><strong>Since we focused on only the landmarks and historical buildings category and there is no pattern in their names, we will find and plot the top 10 landmarks in California instead.</strong>
 
 <img src="img/part2_landmarks.png" alt="Top 10 landmarks dataframe" style="width:304px;height:228px;">
