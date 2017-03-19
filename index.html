@@ -262,7 +262,7 @@ tr:nth-child(even) {
 </header>
 
 <p><strong>We extracted the city and population from the Wikipedia URL related to list of cities and towns in CA.
-Goal: Extract data from the Yelp API, clean up the data and create tables for the best(highest_rated and near highest_rated) restaurants, hotels and landmarks.
+Goal: Extract data from the Yelp API, clean up the data and create tables for the best(highest_rated and near highest_rated) restaurants, hotels and landmarks. </strong></p>
 
 <p><strong>STEPS:</strong>
     <ul>
@@ -467,8 +467,126 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
 <div class="container">
 
 <header>
-   <h1>PART 2</h1>
+   <h1>PART 2: Query Database and Graphs</h1>
 </header>
+
+<p><strong> Goal: create different plots for analysis for categories- restaurants, hotels, and landmarks</strong></p>
+
+<p><strong>STEPS:</strong>
+    <ul>
+        <li><strong>Create functions to extract infomation that we need</strong>
+        </li>
+        <li><strong>Use plotly to make interactive plots so that users can look at the plots more specifically</strong></li>
+        <li><strong>use map to display the top restaurants/hotels/landmarks</strong></li>
+</strong></p>
+
+<p><strong>STEP 1:</strong>
+
+<table>
+  <tr>
+    <th>categories</th>
+    <th>City</th>
+    <th>Phone Number</th>
+    <th>id</th>
+    <th>img_url</th>
+    <th>Closed?</th>
+    <th>name</th>
+    <th>rating</th>
+    <th>Review Count</th>
+    <th>Snippet Text</th>
+    <th>URL</th>
+    <th>city_pop.</th>
+    <th>Lat.</th>
+    <th>Lon.</th>
+
+  </tr>
+  <tr>
+    <td>Thai</td>
+    <td>Adelanto, CA</td>
+    <td>+1-760-246-8122</td>
+    <td>thai-siam-restaurant-adelanto</td>
+    <td>https://s3-media2.fl.yelpcdn.com/bphoto/W_GP2k...</td>
+    <td>0</td>
+    <td>Thai-Siam Restaurant</td>
+    <td>4.5</td>
+    <td>42</td>
+    <td>So I wanted to listen to "In the Aeroplane Ove...</td>
+    <td>https://www.yelp.com/biz/thai-siam-restaurant-...</td>
+    <td>31,765</td>
+    <td>34.582769</td>
+    <td>-117.409214</td>
+  </tr>
+
+   <tr>
+    <td>Mexican</td>
+    <td>Adelanto, CA</td>
+    <td>+1-760-530-2800</td>
+    <td>rauls-mexican-food-adelanto</td>
+    <td>https://s3-media2.fl.yelpcdn.com/bphoto/giLLG1...</td>
+    <td>0</td>
+    <td>Raul's Mexican Food</td>
+    <td>4.0</td>
+    <td>32</td>
+    <td>Agreed with the good reviews here. Good place...</td>
+    <td>https://www.yelp.com/biz/rauls-mexican-food-ad...</td>
+    <td>31,765</td>
+    <td>34.582769</td>
+    <td>-117.409214</td>
+  </tr>
+
+   <tr>
+    <td>Mexican</td>
+    <td>Adelanto, CA</td>
+    <td>+1-760-246-4751</td>
+    <td>miguelitos-family-restaurant-adelanto</td>
+    <td>https://s3-media4.fl.yelpcdn.com/bphoto/aHMsj-...</td>
+    <td>0</td>
+    <td>Miguelitos Family Restaurant</td>
+    <td>4.0</td>
+    <td>14</td>
+    <td>Place to come to after a night out...</td>
+    <td>https://www.yelp.com/biz/miguelitos-family-res...</td>
+    <td>31,765</td>
+    <td>34.582769</td>
+    <td>-117.409214</td>
+  </tr>
+
+   <tr>
+    <td>American (New)</td>
+    <td>Adelanto, CA</td>
+    <td>+1-760-246-8400</td>
+    <td>fat-boyz-grill-adelanto</td>
+    <td>https://s3-media3.fl.yelpcdn.com/bphoto/H2QJry...</td>
+    <td>0</td>
+    <td>Fat Boyz Grill</td>
+    <td>3.5</td>
+    <td>27</td>
+    <td>Great place nice atmosphere wonderful staff fr...</td>
+    <td>https://www.yelp.com/biz/fat-boyz-grill-adelan...</td>
+    <td>31,765</td>
+    <td>34.582769</td>
+    <td>-117.409214</td>
+  </tr>
+
+   <tr>
+    <td>Mexican</td>
+    <td>Adelanto, CA</td>
+    <td>+1-760-530-9161</td>
+    <td>rubios-adelanto-3</td>
+    <td>https://s3-media1.fl.yelpcdn.com/bphoto/pwqZeG...</td>
+    <td>0</td>
+    <td>Rubio's</td>
+    <td>4.0</td>
+    <td>82</td>
+    <td>Rubios best tacos ever specially The gourmet t...</td>
+    <td>https://www.yelp.com/biz/rubios-adelanto-3?adj...</td>
+    <td>31,765</td>
+    <td>34.582769</td>
+    <td>-117.409214</td>
+  </tr>
+
+  </table>
+
 
 
     <a href="https://plot.ly/~stephanielam/80/?share_key=dMfCwLuOPNE3wixUbsDoCq" target="_blank" title="Top 10 most frequent category of Nightlife" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/80.png?share_key=dMfCwLuOPNE3wixUbsDoCq" alt="Top 10 most frequent category of Nightlife" style="max-width: 80%;width: 400px;"  width="400" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
