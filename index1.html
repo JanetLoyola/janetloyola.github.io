@@ -245,96 +245,100 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
 
 <p><strong> Merged that dataframe with yelp data</strong></p>
 
- <table>
-  <tr>
-    <th>Categories</th>
-    <th>City</th>
-    <th>Phone Number</th>
-    <th>ID</th>
-    <th>Claimed?</th>
-    <th>Closed?</th>
-    <th>Mobile url</th>
-    <th>Name</th>
-    <th>Rating</th>
-    <th>Review Count</th>
-    <th>Snippet Text</th>
-    <th>URL</th>
-    <th>population</th>
-    <th>Lat.</th>
-    <th>Lon.</th>
 
-  </tr>
-  <tr>
-    <td>[[Burgers, burgers]]</td>
-    <td>Adelanto, CA</td>
-    <td>+1-760-246-4813</td>
-    <td>bravo-burgers-adelanto</td>
-    <td>False</td>
-    <td>False</td>
-    <td>https://m.yelp.com/biz/bravo-burgers-adelanto?...</td>
-    <td>Bravo Burgers</td>
-    <td>2.5</td>
-    <td>37</td>
-    <td>We had dinner at Bravo Burgers tonight. I orde...</td>
-    <td>https://www.yelp.com/biz/bravo-burgers-adelant...</td>
-    <td>31,765</td>
-    <td>34.582769</td>
-    <td>-117.409214</td>
-  </tr>
+<table>
+        <thead>
+        <tr>
+          <th>Categories</th>
+          <th>City</th>
+         <th>Phone Number</th>
+         <th>ID</th>
+         <th>Claimed?</th>
+         <th>Closed?</th>
+          <th>Mobile url</th>
+         <th>Name</th>
+         <th>Rating</th>
+         <th>Review Count</th>
+         <th>Snippet Text</th>
+          <th>URL</th>
+         <th>population</th>
+         <th>Lat.</th>
+         <th>Lon.</th>
+        </tr>
+    </thead>
+          <tbody>
+        <tr>
+          <td>[[Burgers, burgers]]</td>
+          <td>Adelanto, CA</td>
+          <td>+1-760-246-4813</td>
+          <td>bravo-burgers-adelanto</td>
+          <td>False</td>
+          <td>False</td>
+          <td>https://m.yelp.com/biz/bravo-burgers-adelanto?...</td>
+         <td>Bravo Burgers</td>
+         <td>2.5</td>
+         <td>37</td>
+         <td>We had dinner at Bravo Burgers tonight...</td>
+         <td>https://www.yelp.com/biz/bravo-burgers-adel...</td>
+         <td>31,765</td>
+         <td>34.582769</td>
+         <td>-117.409214</td>
+       </tr>
 
-  <tr>
-    <td>[[[Tacos, tacos]]</td>
-    <td>Adelanto, CA</td>
-    <td>NaN</td>
-    <td>jds-tacos-adelanto-2</td>
-    <td>False</td>
-    <td>False</td>
-    <td>https://m.yelp.com/biz/jds-tacos-adelanto-2?ad...</td>
-    <td>Jds Tacos</td>
-    <td>5.0</td>
-    <td>1</td>
-    <td>Jds tacos coming soon on Friday we will be hav...</td>
-    <td>https://www.yelp.com/biz/jds-tacos-adelanto-2?...</td>
-    <td>31,765</td>
-    <td>34.582769</td>
-    <td>-117.409214</td>
-  </tr>
+       <tr>
+         <td>[[[Tacos, tacos]]</td>
+         <td>Adelanto, CA</td>
+         <td>NaN</td>
+          <td>jds-tacos-adelanto-2</td>
+          <td>False</td>
+          <td>False</td>
+           <td>https://m.yelp.com/biz/jds-tacos-adelanto-2?ad...</td>
+           <td>Jds Tacos</td>
+           <td>5.0</td>
+            <td>1</td>
+            <td>Jds tacos coming soon on Friday we...</td>
+            <td>https://www.yelp.com/biz/jds-tacos-adelanto-2?...</td>
+            <td>31,765</td>
+            <td>34.582769</td>
+            <td>-117.409214</td>
+         </tr>
 
-  <tr>
-    <td>[Mexican, mexican]]</td>
-    <td>Adelanto, CA</td>
-    <td>+1-760-246-4751</td>
-    <td>miguelitos-family-restaurant-adelanto</td>
-    <td>False</td>
-    <td>False</td>
-    <td>https://m.yelp.com/biz/miguelitos-family-resta...</td>
-    <td>Miguelitos Family Restaurant</td>
-    <td>4.0</td>
-    <td>14</td>
-    <td>This is the place to come to after a night out...</td>
-    <td>https://www.yelp.com/biz/miguelitos-family-res...</td>
-    <td>31,765</td>
-    <td>34.582769</td>
-    <td>-117.409214</td>
-  </tr>
-  <tr>
-    <td>[[Thai, thai], [Chinese, chinese]]</td>
-    <td>Adelanto, CA</td>
-    <td>+1-760-246-8122</td>
-    <td>thai-siam-restaurant-adelanto</td>
-    <td>False</td>
-    <td>False</td>
-    <td>https://m.yelp.com/biz/thai-siam-restaurant-ad...</td>
-    <td>Thai-Siam Restaurant</td>
-    <td>4.5</td>
-    <td>42</td>
-    <td>So I wanted to listen to "In the Aeroplane Ove...</td>
-    <td>https://www.yelp.com/biz/thai-siam-restaurant-...</td>
-    <td>31,765</td>
-    <td>34.582769</td>
-    <td>-117.409214</td>
-  </tr>
-  </table>
+         <tr>
+           <td>[Mexican, mexican]]</td>
+           <td>Adelanto, CA</td>
+            <td>+1-760-246-4751</td>
+            <td>miguelitos-family-restaurant-adelanto</td>
+            <td>False</td>
+            <td>False</td>
+            <td>https://m.yelp.com/biz/miguelitos-family-resta...</td>
+            <td>Miguelitos Family Restaurant</td>
+            <td>4.0</td>
+            <td>14</td>
+           <td>This is the place to come after a night...</td>
+            <td>https://www.yelp.com/biz/miguelitos-family-res...</td>
+           <td>31,765</td>
+           <td>34.582769</td>
+           <td>-117.409214</td>
+         </tr>
+         <tr>
+            <td>[[Thai, thai], [Chinese, chinese]]</td>
+            <td>Adelanto, CA</td>
+            <td>+1-760-246-8122</td>
+            <td>thai-siam-restaurant-adelanto</td>
+            <td>False</td>
+           <td>False</td>
+           <td>https://m.yelp.com/biz/thai-siam-restaurant-ad...</td>
+           <td>Thai-Siam Restaurant</td>
+           <td>4.5</td>
+           <td>42</td>
+           <td>So I wanted to listen to "In the Aero...</td>
+           <td>https://www.yelp.com/biz/thai-siam-restaurant-...</td>
+           <td>31,765</td>
+           <td>34.582769</td>
+           <td>-117.409214</td>
+         </tr>
+    </tbody>
+    </table>
 
 </article>
 
