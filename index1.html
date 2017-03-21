@@ -129,10 +129,13 @@ tr:nth-child(even) {
 <section class="main-content">
 <p><strong>Code appendix: </strong> </p>
 
-<a href="./part1.html"> Part 1: Data Wrangling</a>
-<a href="./part2.html"> Part 1: Query Database and Graphs </a>
-<a href="./part3.html"> Part 1: Getting basic information of each city.</a>
-<a href="./part4.html"> Part 1: Analyzing the review content.</a>
+<a target="_blank" href="./part1.html"><strong>Part 1: Data Wrangling</strong></a>
+<br>
+<a target="_blank" href="./part2.html"><strong> Part 2: Query Database and Graphs </strong></a>
+<br>
+<a target="_blank" href="./part3.html"></strong> Part 3: Getting basic information of each city.</strong></a>
+<br>
+<a target="_blank" href="./part4.html"></strong> Part 4: Analyzing the review content.</strong></a>
 <br>
 </section>
 </div>
@@ -198,6 +201,7 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
     <td>    20,700</td>
   </tr>
   </table>
+  <br>
 
   <p><strong> Now, we extracted the city, latitude and longitude from an excel file calcities.</strong></p>
 
@@ -253,6 +257,7 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
     <td>-117.043086</td>
   </tr>
  </table>
+ <br>
 
 <p><strong> Then we merged city,population,latitude and longitude into one dataframe.</strong></p>
 
@@ -353,7 +358,7 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
     </tbody>
     </table>
       </small>
-
+<br>
 
 </article>
 
@@ -483,6 +488,7 @@ Goal: create different plots for analysis for categories- restaurants, hotels, a
   </tr>
 
   </table>
+  <br>
 
 <h1><strong>RESTAURANTS:</strong></h1>
 
@@ -491,6 +497,7 @@ Goal: create different plots for analysis for categories- restaurants, hotels, a
 
     <a href="https://plot.ly/~stephanielam/50/?share_key=cOiKyLK49MCvA7nM6d4T7X" target="_blank" title="Top 10 most frequent category of Restaurant" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/50.png?share_key=cOiKyLK49MCvA7nM6d4T7X" alt="Top 10 most frequent category of Restaurant" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:50" sharekey-plotly="cOiKyLK49MCvA7nM6d4T7X" src="https://plot.ly/embed.js" async></script>
+    <br>
 
 <p><strong> From this bar plot, we can see that Mexican food is the most popular cuisine. </strong></p>
 
@@ -499,27 +506,34 @@ Goal: create different plots for analysis for categories- restaurants, hotels, a
 
     <a href="https://plot.ly/~stephanielam/54/?share_key=PKHXLPn4XduN79K2swuTK4" target="_blank" title="Restaurant average rating by city" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/54.png?share_key=PKHXLPn4XduN79K2swuTK4" alt="Restaurant average rating by city" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:54" sharekey-plotly="PKHXLPn4XduN79K2swuTK4" src="https://plot.ly/embed.js" async></script>
+    <br>
 
 <p><strong>We see that most of the restaurants have 4 stars rating or higher. Hence, we can tell that CA has pretty posh restaurants overall. </strong></p>
 
     <a href="https://plot.ly/~stephanielam/54/?share_key=PKHXLPn4XduN79K2swuTK4" target="_blank" title="Restaurant average rating by city" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/54.png?share_key=PKHXLPn4XduN79K2swuTK4" alt="Restaurant average rating by city" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:54" sharekey-plotly="PKHXLPn4XduN79K2swuTK4" src="https://plot.ly/embed.js" async></script>
+    <br>
 
 <p><strong>In this map, the bigger dots indicate higher average review count. We see that most of the restaurants in different cities are between 4 and 4.5 stars. Also, there is currently no city that has a average rating higher than 4.5.</strong></p>
 
 <p><strong>Now we create a dataframe of the top 3 restaurants of that particular cuisine in CA.</strong>
 
 <img src="img/part2.png" alt="Top 3 restaurants by category" style="width:304px;height:228px;">
+<br>
 <img src="img/part2b.png" alt="Top 3 restaurants by category (cont.)" style="width:304px;height:228px;">
+<br>
 
 <p><strong>For example: Image of the top 3 Mexican restaurants.</strong>
 
 <img src="img/top3rest.png" alt="Top 3 Mexican restaurants" style="width:160px;height:500px;">
 
+<br>
 <h1><strong>HOTELS:</strong></h1>
 
 <img src="img/part2_hotel.png" alt="Hotel dataframe" style="width:304px;height:228px;">
+<br>
 <img src="img/part2_hotelb.png" alt="Hotel dataframe(cont.)" style="width:304px;height:228px;">
+<br>
 
 <p><strong>From the dataframe we got from yelp, we see that the Hotel category doesn't contain much variety in terms of category. For better analysis of the hotel data, we will first restrict the data to those that are indeed hotels, and look at the pie chart of the star distribution and map of average rating in each city</strong></p>
 
@@ -527,6 +541,7 @@ Goal: create different plots for analysis for categories- restaurants, hotels, a
 
     <a href="https://plot.ly/~stephanielam/62/?share_key=RMMeA9jBcHukLlwssHugku" target="_blank" title="star distribution in the category Hotels" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/62.png?share_key=RMMeA9jBcHukLlwssHugku" alt="star distribution in the category Hotels" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:62" sharekey-plotly="RMMeA9jBcHukLlwssHugku" src="https://plot.ly/embed.js" async></script>
+    <br>
 
 <p><strong>From the pie chart, we see that the majority of hotels are between 3 to 4 stars. There is only 3% of hotels that are rated 5 stars while 26.7% of the hotels have 3.5 stars.</strong>
 
@@ -541,16 +556,21 @@ Goal: create different plots for analysis for categories- restaurants, hotels, a
 
     <a href="https://plot.ly/~stephanielam/72/?share_key=mhmxC6NojzPfwOjbgarPrK" target="_blank" title="star distribution in the category Landmarks" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/72.png?share_key=mhmxC6NojzPfwOjbgarPrK" alt="star distribution in the category Landmarks" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:72" sharekey-plotly="mhmxC6NojzPfwOjbgarPrK" src="https://plot.ly/embed.js" async></script>
+    <br>
 
 <img src="img/landmarks.png" alt="Hotel dataframe" style="width:304px;height:228px;"><p><strong>Landmarks dataframe</strong></p>
+<br>
 <p><strong>Since we focused on only the landmarks and historical buildings category and there is no pattern in their names, we will find and plot the top 10 landmarks in California instead.</strong>
 
 <img src="img/part2_landmarks.png" alt="Top 10 landmarks dataframe" style="width:304px;height:228px;">
+<br>
 <img src="img/part2_landmarksb.png" alt="Top 10 landmarks dataframe(cont.)" style="width:304px;height:228px;">
+<br>
 
 
     <a href="https://plot.ly/~stephanielam/100/?share_key=6Z1se5qoAFJNpk6lLZyvQn" target="_blank" title="Top 10 Landmarks" style="display: block; text-align: center;"><img src="https://plot.ly/~stephanielam/100.png?share_key=6Z1se5qoAFJNpk6lLZyvQn" alt="Top 10 Landmarks" style="max-width: 100%;width: 600px;"  width="600" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" /></a>
     <script data-plotly="stephanielam:100" sharekey-plotly="6Z1se5qoAFJNpk6lLZyvQn" src="https://plot.ly/embed.js" async></script>
+    <br>
 
 <p><strong>This landmarks category is different from the restaurant and hotel category because out of the top 10 landmarks, half of them are located in San Francisco while Los Angeles does not have any.</strong>
 
@@ -662,12 +682,16 @@ Goal: create different plots for analysis for categories- restaurants, hotels, a
     <td>GNIS feature IDs : 277593, 2411786</td>
   </tr>
 </table>
+<br>
 
 <p><strong>Query Database and User Input</strong></p>
 
 <img src="img/part3_code.png" alt="Asking user input" style="width:400px;height:220px;">
+<br>
 <img src="img/part3_result.png" alt="Result of user input (SFO)" style="width:370px;height:480px;">
+<br>
 <img src="img/part3_table.png" alt="Summary of city from user input" style="width:370px;height:550px;">
+<br>
 
 
 <p><strong>Now I created a function to recommend the best restaurants, hotels and landmarks to you specifically.</strong>
@@ -687,6 +711,7 @@ You enter City: <strong> San Francisco, CA, Restaurant Category: Chinese, Lower_
 <p>We are sorry. We can not find a restaurant that meets your criterias in our database. Please try a different kinds of food or rating. But first, let's look at the TOP 5 alternatives that we find.</p>
 
 <img src="img/part3_top5.png" alt="Top 5 restaurant alternatives in SFO" style="width:304px;height:228px;">
+<br>
 
 <p><strong>Now, to check if the users are satisfied with the hotel results or not.</strong></p>
 
@@ -697,16 +722,18 @@ You enter City: <strong> San Francisco, CA, Restaurant Category: Chinese, Lower_
 <p><strong>Please answer the following questions so that we can recommend the best restaurants, hotels and landmarks to you.</strong></p>
 
 Which accommondation do you want us to recommend? For example, restaurants, hotels or landmarks:
-<strong> hotels</strong> 
+<strong> hotels</strong> <br>
 What kind of hotel do you prefer to stay in? For example, inns, hotels or resorts? 
-<strong> resorts</strong>
+<strong> resorts</strong><br>
 What is your preferred range of rating for hotels? 
-<strong> 1, 4</strong>
+<strong> 1, 4</strong><br>
 You enter City:<strong> San Francisco, CA, Category: Resort, Lower_bound rating: 1, Upper_bound rating: 4 </strong>
+<br>
 
 <p>We are sorry. We can not find a result that meets your criterias in our database. Please try a different input or rating. But first, let's look at the TOP 5 alternatives that we find.</p>
 
 <img src="img/part3_hotels.png" alt="Top 5 hotel alternatives in SFO" style="width:304px;height:228px;">
+<br>
 
 </div>
 
@@ -728,7 +755,10 @@ You enter City:<strong> San Francisco, CA, Category: Resort, Lower_bound rating:
 <h1><strong>Review Analysis For Best Rated Nearby Restaurants, Hotels, Landmarks for all the cities in California</strong></h1>
 
 <img src="img/part4_rest.png" alt="Number of counts of most occurring words in restaurants" style="width:304px;height:228px;">
-<img src="img/part4_restb.png" alt="Most commonly occurring words in restaurants" style="width:304px;height:228px;"><p><strong>Graphs for restaurants.</strong></p>
+<br>
+<img src="img/part4_restb.png" alt="Most commonly occurring words in restaurants" style="width:304px;height:228px;">
+<br>
+<p><strong>Graphs for restaurants.</strong></p>
 
 <p><strong>Restaurants Analysis:</strong>
 <ul>
@@ -737,7 +767,10 @@ You enter City:<strong> San Francisco, CA, Category: Resort, Lower_bound rating:
 </p>
 
 <img src="img/part4_hotel.png" alt="Number of counts of most occurring wordsin hotels" style="width:304px;height:228px;">
-<img src="img/part4_hotelb.png" alt="Most commonly occurring words in hotels" style="width:304px;height:228px;"><p><strong>Graphs for hotels.</strong></p>
+<br>
+<img src="img/part4_hotelb.png" alt="Most commonly occurring words in hotels" style="width:304px;height:228px;"><p><strong>
+<br>
+Graphs for hotels.</strong></p>
 
 <p><strong>Hotels Analysis:</strong>
 <ul>
@@ -747,7 +780,9 @@ You enter City:<strong> San Francisco, CA, Category: Resort, Lower_bound rating:
 
 
 <img src="img/part4_landmarks.png" alt="Number of counts of most occurring words in landmarks" style="width:304px;height:228px;">
+<br>
 <img src="img/part4_landmarksb.png" alt="Most commonly occurring words in landmarks" style="width:304px;height:228px;"><p><strong>Graphs for landmarks.</strong></p>
+<br>
 
 
 <p><strong>Landmarks Analysis:</strong>
