@@ -3,8 +3,8 @@
       <a href="#Introduction">Introduction</a>
       <br><a href="#Data">I. Data Wrangling</a>
       <br><a href="#Analysis">II. Analysis and Visualization</a>
-      <br><a href="#ReviewAnalysis">III. Review Analysis</a>
-      <br><a href="#User Input">IV. Interactive User Input</a>
+      <br><a href="#User Input">III. Interactive User Input</a>
+      <br><a href="#ReviewAnalysis">IV. Review Analysis</a>
       <br><a href="#Next Step">Conclusion &amp; Next Step</a>
       <br><a href="#Codes">Codes</a>
       <br>
@@ -21,7 +21,7 @@
       <a href="https://github.com/stephanielamhiuman">Stephanie (Hiu Man) Lam, </a>
       <a href="https://github.com/chloechen1995">Chloe (Jieyi) Chen, </a>
 
-      <p><strong>Each of us in our group have a passion for traveling. So that's how we came up with the idea of helping tourists discover the most outstanding places in California by focusing on three categories: hotels, restaurants, and landmarks.</strong></p>
+      <p><strong>Each of us in our group have a passion for traveling. That's how we came up with the idea of helping tourists discover the most outstanding places in California by focusing on three categories: hotels, restaurants, and landmarks.</strong></p>
 <br>
 
 <p><strong>Our goal of the project is to provide a travel guide for California visitors by showing them the best hotels, restaurants, and landmarks with the applications of web data processing, interactive data visualization, natural language processing, and interactive user input using Python.</strong></p>
@@ -43,20 +43,6 @@
                  </p></ul> <b>
 
   </div>
-<div class="blurb">
-<section class="main-content">
-<p><strong><a name="Codes">Code appendix: </strong> </p>
-
-<a target="_blank" href="./part1.html"><strong>Part 1: Data Wrangling</strong></a>
-<br>
-<a target="_blank" href="./part2.html"><strong> Part 2: Query Database and Graphs </strong></a>
-<br>
-<a target="_blank" href="./part3.html"></strong> Part 3: Getting basic information of each city.</strong></a>
-<br>
-<a target="_blank" href="./part4.html"></strong> Part 4: Analyzing the review content.</strong></a>
-<br>
-</section>
-</div>
 
 <br>
 
@@ -170,7 +156,7 @@
 <div class="container">
 
 <h2><strong><a name="Analysis"><span style="color: #DC143C">II. Analysis and Visualization</span></a></strong></h2>
-        <p> Since we want our users to be able to track the different categories for their own personal needs, we used interactive plots to give the user a richer information experience.
+        <p> Since we want our users to be able to track the different categories for their own personal needs, we used interactive plots to give the user a better way to gain information.
       </p>
     <li><a href="#Restaurants">Restaurant</a></li>
         <li><a href="#Hotels">Hotels</a></li>
@@ -200,7 +186,7 @@
         </div>
           <small>In this map,The bigger dots indicate higher average review count. We see that most of the restaurants in different cities are between 4 and 4.5 stars. There is currently no city that has a average rating higher than 4.5.</small>
       <br>
-          <small>We want the users to be able to look at where are the top 3 restaurants located by the cuisine they want. Therefore we created functions to extract the top 3 restaurants by cuisine and plot the locations on a map</small>
+          <small>We want the users to be able to look at where are the top 3 restaurants are located by the cuisine they want. Therefore we created functions to extract the top 3 restaurants by cuisine and plot the locations on a map</small>
       <div data-plotly="stephanielam/92" style="text-align: center; position: relative;">
          <a href="https://plot.ly/~stephanielam/92/?share_key=AfHJE5iyESkFVLzfBsUQcy" target="_blank" title="Top 5 restaurant by category" style="display: block; text-align: center;" data-plotly="stephanielam/92"><img src="https://plot.ly/~stephanielam/92.png?share_key=AfHJE5iyESkFVLzfBsUQcy" alt="Top 5 restaurant by category" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/92"></a>
          <script data-plotly="stephanielam:92" sharekey-plotly="AfHJE5iyESkFVLzfBsUQcy" src="https://plot.ly/embed.js" async=""></script>
@@ -212,19 +198,19 @@
            <a href="https://plot.ly/~stephanielam/60/?share_key=7ay2cQ3TvYvKbg5Nj7RD4e" target="_blank" title="Top 10 most frequent category of Hotels" style="display: block; text-align: center;" data-plotly="stephanielam/60"><img src="https://plot.ly/~stephanielam/60.png?share_key=7ay2cQ3TvYvKbg5Nj7RD4e" alt="Top 10 most frequent category of Hotels" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/60"></a>
             <script data-plotly="stephanielam:60" sharekey-plotly="7ay2cQ3TvYvKbg5Nj7RD4e" src="https://plot.ly/embed.js" async=""></script>
       </div>
-          <small> From the dataframe we got from yelp, the Hotel category doesn't contain much varieties of category. Therefore, to better analysis the hotel data, we first restricted the data to those that are indeed Hotels, and look at the pie chart of the star distribution and map of average rating in each city.</small>
+          <small> From the dataframe we got from yelp, the hotel category doesn't contain much varieties of category. Therefore, for better analysis of the hotel data, we first restricted the data to those that are indeed only hotels, and looked at the pie chart of the star distribution and map of average rating in each city.</small>
         
           <div data-plotly="stephanielam/62" style="text-align: center; position: relative;">
            <a href="https://plot.ly/~stephanielam/62/?share_key=RMMeA9jBcHukLlwssHugku" target="_blank" title="star distribution in the category Hotels" style="display: block; text-align: center;" data-plotly="stephanielam/62"><img src="https://plot.ly/~stephanielam/62.png?share_key=RMMeA9jBcHukLlwssHugku" alt="star distribution in the category Hotels" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/62"></a>
            <script data-plotly="stephanielam:62" sharekey-plotly="RMMeA9jBcHukLlwssHugku" src="https://plot.ly/embed.js" async=""></script>
       </div>
-          <small>From the pie chart, we can see that the majority of hotels are between 3 to 4 stars. There is only 3.04% of hotels are rated 5 stars while 26.7% are 3.5 stars.</small>
+          <small>From the pie chart, we can see that the majority of hotels are between 3 and 4 stars. There is only 3.04% of hotels are rated 5 stars while 26.7% are 3.5 stars.</small>
       
           <div data-plotly="stephanielam/64" style="text-align: center; position: relative;">
             <a href="https://plot.ly/~stephanielam/64/?share_key=mqwPR85iKghWPnWuAVtFbO" target="_blank" title="Hotels average rating by city" style="display: block; text-align: center;" data-plotly="stephanielam/64"><img src="https://plot.ly/~stephanielam/64.png?share_key=mqwPR85iKghWPnWuAVtFbO" alt="Hotels average rating by city" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/64"></a>
            <script data-plotly="stephanielam:64" sharekey-plotly="mqwPR85iKghWPnWuAVtFbO" src="https://plot.ly/embed.js" async=""></script>
       </div>
-          <small>Compared to the restaurants category, there are actually quite a lot of cities that has a average hotel rating between 1 - 3 stars. The only 2 red dots in the map: the dot in Exeter is very small and the average reviews count is only 14, indicating that even though it has a average 4.5 rating in the city, there might be just one hotel in the city. On the other hand, the hotels in Palm Spring is very nice because the average review count is very high.</small>
+          <small>Compared to the restaurants category, there are actually quite a lot of cities that have a average hotel rating between 1 and 3 stars. The only 2 red dots in the map: the dot in Exeter is very small and the average reviews count is only 14, indicating that even though it has a average 4.5 rating in the city, there might be just one hotel in the city. On the other hand, the hotels in Palm Spring is very nice because the average review count is very high.</small>
       
           <div data-plotly="stephanielam/98" style="text-align: center; position: relative;">
            <a href="https://plot.ly/~stephanielam/98/?share_key=cI9VduRNP8rVawMkPj2gma" target="_blank" title="Top 5 hotels by category" style="display: block; text-align: center;" data-plotly="stephanielam/98"><img src="https://plot.ly/~stephanielam/98.png?share_key=cI9VduRNP8rVawMkPj2gma" alt="Top 5 hotels by category" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/98"></a>
@@ -473,7 +459,23 @@ Graphs for hotels.</strong></p>
 <h2><strong><a name="Next Step"><span style="color: #DC143C">Conclusion &amp; Next Step</span></a></strong></h2>
       <p>Our next step of our travel guide would be creating a server-side framework like flask to create a website that could actually get the user inputs and display corresponding 
         outputs and plots relative to whatever the users need.</p>
+        <b>
 
+<div class="blurb">
+<section class="main-content">
+<p><strong><a name="Codes">Code appendix: </strong> </p>
+
+<a target="_blank" href="./part1.html"><strong>Part 1: Data Wrangling</strong></a>
+<br>
+<a target="_blank" href="./part2.html"><strong> Part 2: Query Database and Graphs </strong></a>
+<br>
+<a target="_blank" href="./part3.html"></strong> Part 3: Getting basic information of each city.</strong></a>
+<br>
+<a target="_blank" href="./part4.html"></strong> Part 4: Analyzing the review content.</strong></a>
+<br>
+
+</section>
+</div>
 
 </body>
 
