@@ -144,6 +144,21 @@ tr:nth-child(even) {
 
 <br>
 
+<div class="container">
+
+<header>
+   <h1>INTRODUCTION</h1>
+</header>
+<p><strong>The project on this page provides an overview of the final project we did for our STATS 141B class. This project is done by a group of 3 students: Stephanie (Hiu Man) Lam, Chloe (Jieyi) Chen, and Janet Loyola (me). 
+We divided our project into 4 parts, including data wrangling, Query Database and Graphs,interactive user input, and analyzing the review content. The code for each of these parts is in the link above. </strong></p>
+<br>
+
+<p><strong>Each of us in our group have a passion for traveling. So that's how we came up with the idea of helping tourists discover the most outstanding places in California by focusing on three categories: hotels, restaurants, and landmarks.</strong></p>
+<br>
+
+<p><strong>Our goal of the project is to provide a travel guide for California visitors by showing them the best hotels, restaurants, and landmarks with the applications of web data processing, interactive data visualization, natural language processing, and interactive user input using Python.</strong></p>
+<br>
+
     <div class="container">
 
 <header>
@@ -261,9 +276,9 @@ Goal: Extract data from the Yelp API, clean up the data and create tables for th
  </table>
  <br>
 
-<p><strong> Then we merged city,population,latitude and longitude into one dataframe.</strong></p>
+<p><strong> Then we merged city,population,latitude and longitude into one dataframe. </strong></p>
 
-<p><strong> Merged that dataframe with yelp data</strong></p>
+<p><strong> Merged that dataframe with yelp data. Below is the head of our final dataframe for the restaurant category. </strong></p>
 
 <small> 
       <table>
@@ -492,6 +507,92 @@ Goal: create different plots for analysis for categories- restaurants, hotels, a
 
   </table>
   <br>
+
+        <p> Since we want our users to be able to track the different categories for their own personal needs, we used interactive plots to give the user a richer information experience.
+      </p>
+    <li><a href="#Restaurants">Restaurant</a></li>
+        <li><a href="#Hotels">Hotels</a></li>
+      <li><a href="#Landmarks">Landmarks</a></li>
+      
+        <small>Note: please allow some time for the interactive plots to load </small>
+      
+            <h3><a name="Restaurants"><span style="color: #DC143C">Restaurant Category</span></a></h3>
+        
+            <div data-plotly="stephanielam/50" style="text-align: center; position: relative;">
+          <a href="https://plot.ly/~stephanielam/50/?share_key=cOiKyLK49MCvA7nM6d4T7X" target="_blank" title="Top 10 most frequent category of Restaurant" style="display: block; text-align: center;" data-plotly="stephanielam/50"><img src="https://plot.ly/~stephanielam/50.png?share_key=cOiKyLK49MCvA7nM6d4T7X" alt="Top 10 most frequent category of Restaurant" style="max-width: 100%;width: 500x;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/50"></a>
+        <script data-plotly="stephanielam:50" sharekey-plotly="cOiKyLK49MCvA7nM6d4T7X" src="https://plot.ly/embed.js" async=""></script>
+        </div>
+            <small> Since there are many different categories in restaurants, we will only focus on the top 10 most frequent cateogries. 
+          From this bar plot, we can see that Mexican food is the most popular cuisine.</small>
+        <br><small>Now, we need a plot to see how these categories are distributed in different ratings.</small>
+        <br>
+        <div data-plotly="stephanielam/88" style="text-align: center; position: relative;">
+         <a href="https://plot.ly/~stephanielam/88/?share_key=48vMzvfIe6iaoV3nMWWqsa" target="_blank" title="Rating stars distribution (by categeory) for Restaurant" style="display: block; text-align: center;" data-plotly="stephanielam/88"><img src="https://plot.ly/~stephanielam/88.png?share_key=48vMzvfIe6iaoV3nMWWqsa" alt="Rating stars distribution (by categeory) for Restaurant" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/88"></a>
+         <script data-plotly="stephanielam:88" sharekey-plotly="48vMzvfIe6iaoV3nMWWqsa" src="https://plot.ly/embed.js" async=""></script>
+        </div>
+          <small>We see that most of the restaurants have 4 stars rating or higher. Hence, we can tell that CA has pretty posh restaurants overall. </small>
+        <br>
+        <div data-plotly="stephanielam/54" style="text-align: center; position: relative;">
+         <a href="https://plot.ly/~stephanielam/54/?share_key=PKHXLPn4XduN79K2swuTK4" target="_blank" title="Restaurant average rating by city" style="display: block; text-align: center;" data-plotly="stephanielam/54"><img src="https://plot.ly/~stephanielam/54.png?share_key=PKHXLPn4XduN79K2swuTK4" alt="Restaurant average rating by city" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/54"></a>
+          <script data-plotly="stephanielam:54" sharekey-plotly="PKHXLPn4XduN79K2swuTK4" src="https://plot.ly/embed.js" async=""></script>
+        </div>
+          <small>In this map,The bigger dots indicate higher average review count. We see that most of the restaurants in different cities are between 4 and 4.5 stars. However, there is currently no city in California that has a average rating higher than 4.5.</small>
+      <br>
+          <small>We want the users to be able to look at where the top 3 restaurants are located by the cuisine they want. Therefore we created functions to extract the top 3 restaurants by cuisine and plot the locations on a map</small>
+      <div data-plotly="stephanielam/92" style="text-align: center; position: relative;">
+         <a href="https://plot.ly/~stephanielam/92/?share_key=AfHJE5iyESkFVLzfBsUQcy" target="_blank" title="Top 5 restaurant by category" style="display: block; text-align: center;" data-plotly="stephanielam/92"><img src="https://plot.ly/~stephanielam/92.png?share_key=AfHJE5iyESkFVLzfBsUQcy" alt="Top 5 restaurant by category" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/92"></a>
+         <script data-plotly="stephanielam:92" sharekey-plotly="AfHJE5iyESkFVLzfBsUQcy" src="https://plot.ly/embed.js" async=""></script>
+          </div>
+          <small>Most of the top 3 restaurants are located near San Francisco and the Los Angeles-San Diego region.</small>
+          
+        <h3><a name="Hotels"><span style="color: #DC143C">Hotel Category</span></a></h3>
+          <div data-plotly="stephanielam/60" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/60/?share_key=7ay2cQ3TvYvKbg5Nj7RD4e" target="_blank" title="Top 10 most frequent category of Hotels" style="display: block; text-align: center;" data-plotly="stephanielam/60"><img src="https://plot.ly/~stephanielam/60.png?share_key=7ay2cQ3TvYvKbg5Nj7RD4e" alt="Top 10 most frequent category of Hotels" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/60"></a>
+            <script data-plotly="stephanielam:60" sharekey-plotly="7ay2cQ3TvYvKbg5Nj7RD4e" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small> From the dataframe that we got from yelp, we see that the hotel category doesn't contain much variety of categories. Therefore, to get better analysis of the hotel data, we first restricted the data to those that are indeed 'hotels', and looked at the pie chart of the star distribution and map of average rating in each city.</small>
+        
+          <div data-plotly="stephanielam/62" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/62/?share_key=RMMeA9jBcHukLlwssHugku" target="_blank" title="star distribution in the category Hotels" style="display: block; text-align: center;" data-plotly="stephanielam/62"><img src="https://plot.ly/~stephanielam/62.png?share_key=RMMeA9jBcHukLlwssHugku" alt="star distribution in the category Hotels" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/62"></a>
+           <script data-plotly="stephanielam:62" sharekey-plotly="RMMeA9jBcHukLlwssHugku" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>From the pie chart, we can see that the majority of hotels are between 3 to 4 stars. There is only 3.04% of hotels that are rated 5 stars while 26.7% are 3.5 stars.</small>
+      
+          <div data-plotly="stephanielam/64" style="text-align: center; position: relative;">
+            <a href="https://plot.ly/~stephanielam/64/?share_key=mqwPR85iKghWPnWuAVtFbO" target="_blank" title="Hotels average rating by city" style="display: block; text-align: center;" data-plotly="stephanielam/64"><img src="https://plot.ly/~stephanielam/64.png?share_key=mqwPR85iKghWPnWuAVtFbO" alt="Hotels average rating by city" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/64"></a>
+           <script data-plotly="stephanielam:64" sharekey-plotly="mqwPR85iKghWPnWuAVtFbO" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>Compared to the restaurants category, there are actually quite a lot of cities that have an average hotel rating between 1 and 3 stars. The only 2 red dots in the map: the dot in Exeter is very small and the average reviews count is only 14, indicating that even though it has a average 4.5 rating in the city, there might be just one hotel in the city. On the other hand, the hotels in Palm Spring is very nice because the average review count is very high.</small>
+      
+          <div data-plotly="stephanielam/98" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/98/?share_key=cI9VduRNP8rVawMkPj2gma" target="_blank" title="Top 5 hotels by category" style="display: block; text-align: center;" data-plotly="stephanielam/98"><img src="https://plot.ly/~stephanielam/98.png?share_key=cI9VduRNP8rVawMkPj2gma" alt="Top 5 hotels by category" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/98"></a>
+           <script data-plotly="stephanielam:98" sharekey-plotly="cI9VduRNP8rVawMkPj2gma" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>We grouped the hotels into different categories by finding the pattern within their name such as Hotel, Motel, or Inn. Similar to the restaurant category, the map shows that most of the top hotels are located near San Francisco and LA-SD area. </small>
+        
+        <h3><a name="Landmarks"><span style="color: #DC143C">The Landmarks Category</span></a></h3>
+          <div data-plotly="stephanielam/70" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/70/?share_key=aB3IawLiB2oe0hz17zZrQ1" target="_blank" title="Top 10 most frequent category of Landmarks" style="display: block; text-align: center;" data-plotly="stephanielam/70"><img src="https://plot.ly/~stephanielam/70.png?share_key=aB3IawLiB2oe0hz17zZrQ1" alt="Top 10 most frequent category of Landmarks" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/70"></a>
+           <script data-plotly="stephanielam:70" sharekey-plotly="aB3IawLiB2oe0hz17zZrQ1" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <div data-plotly="stephanielam/72" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/72/?share_key=mhmxC6NojzPfwOjbgarPrK" target="_blank" title="star distribution in the category Landmarks" style="display: block; text-align: center;" data-plotly="stephanielam/72"><img src="https://plot.ly/~stephanielam/72.png?share_key=mhmxC6NojzPfwOjbgarPrK" alt="star distribution in the category Landmarks" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/72"></a>
+           <script data-plotly="stephanielam:72" sharekey-plotly="mhmxC6NojzPfwOjbgarPrK" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>From the pie chart, most landmarks seem to have high rating ranging between 4 and 5 stars.</small>
+          <small>Since we focused on only the landmarks and historical buildings category with no pattern in their names, we will find and plot the top 10 landmarks in California instead.</small>
+      <div data-plotly="stephanielam/74" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/74/?share_key=ZMUO7gT94dprgwolTKffsL" target="_blank" title="Landmarks average rating by city" style="display: block; text-align: center;" data-plotly="stephanielam/74"><img src="https://plot.ly/~stephanielam/74.png?share_key=ZMUO7gT94dprgwolTKffsL" alt="Landmarks average rating by city" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/74"></a>
+            <script data-plotly="stephanielam:74" sharekey-plotly="ZMUO7gT94dprgwolTKffsL" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>From the previous plot and this map, we see that landmarks have dramatically more cities that are highly-rated. And most of them also have high average review count.</small>
+        <div data-plotly="stephanielam/100" style="text-align: center; position: relative;">
+            <a href="https://plot.ly/~stephanielam/100/?share_key=6Z1se5qoAFJNpk6lLZyvQn" target="_blank" title="Top 10 Landmarks" style="display: block; text-align: center;" data-plotly="stephanielam/100"><img src="https://plot.ly/~stephanielam/100.png?share_key=6Z1se5qoAFJNpk6lLZyvQn" alt="Top 10 Landmarks" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/100"></a>
+           <script data-plotly="stephanielam:100" sharekey-plotly="6Z1se5qoAFJNpk6lLZyvQn" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>Different from the restaurant and hotel category, around half of the top 10 landmarks are located in San Francisco while Los Angeles does not have any.</small>
+
+  
 
 <h1><strong>RESTAURANTS:</strong></h1>
 
@@ -800,3 +901,389 @@ Graphs for hotels.</strong></p>
 </body>
 
 </html>
+
+<section class="main-content">
+      <p><strong>Table of Content</strong></p>
+      <a href="#Introduction">Introduction</a>
+      <br><a href="#Data">I. Data Wrangling</a>
+      <br><a href="#Analysis">II. Analysis and Vistualization</a>
+      <br><a href="#ReviewAnalysis">III. Review Analysis</a>
+      <br><a href="#User Input">IV. Interactive User Input</a>
+      <br><a href="#Next Step">Conclusion &amp; Next Step</a>
+      <br><a href="#Codes">Codes</a>
+      <br>
+      <br><h1 align="center"><strong><span style="color: #DC143C" ,="">STATS 141B FINAL PROJECT <br> CALIFORNIA TRAVEL GUIDE</span></strong></h1>
+      <br>
+      <br>
+      <img src="../style/hotel.png" alt="Hotel" style="width:260px;height:190px;">
+            <img src="../style/sf.png" alt="SFO" style="width:260px;height:190px;">
+            <img src="../style/food.png" alt="Food" style="width:260px;height:190px;">
+      
+      <h2><strong><a name="Introduction"><span style="color: #DC143C">Introduction</span></a></strong></h2>
+        <p>The project on this page provides an overview of the final project we did for our class. This project is done by a group of 3 students: 
+      <a href="https://github.com/stephanielamhiuman">Stephanie (Hiu Man) Lam, </a>
+      <a href="https://github.com/chloechen1995">Chloe (Jieyi) Chen, </a>
+      <a href="https://github.com/janetloyola">and Janet Loyola</a>
+       <br> We divided our project into 4 parts, including data wrangling, anaylsis and vistualization, review analysis, and interactive user input.
+      At the end of this page, we will provides <a href="#Codes"><span style="color: #DC143C">links</span></a> to direct to the 4 parts of our project html where the codes could be seen.
+        </p>
+    <p> With our passion of traveling, we are interested in helping the others to discover the most outstanding places in California focusing on 
+          only 3 categories:
+          <br><span style="color: #B22222"> - hotels, restaurants, and landmarks. </span>
+      <br>
+      <br>Our goal of the project is to provide a travel guide for California visitors by showing them the best hotels, restaurants, and landmarks with 
+      the applications of web data processing, interactive data vistualization, natural language processing, and interactive user input using Python.
+        </p>
+        
+      <h2><strong><a name="Data"><span style="color: #DC143C">I. Data Wrangling</span></a></strong></h2>
+        <p>Extracted and collected data
+    from the <a href="https://www.yelp.com/developers/documentation/v3/business_search"><span style="color: #B22222">Yelp Search API</span></a> and
+    performed a web scraping from <a href="https://www.wikipedia.org/"><span style="color: #B22222">Wikipedia page</span></a>, we created a dataframe
+    with business and California cities information.
+    </p>
+    <p>The head of our final dataframe for the category restaurant: </p>
+  <small> 
+      <table>
+        <thead>
+        <tr>
+          <th>Categories</th>
+          <th>City</th>
+         <th>Phone Number</th>
+         <th>ID</th>
+         <th>Claimed?</th>
+         <th>Closed?</th>
+          <th>Mobile url</th>
+         <th>Name</th>
+         <th>Rating</th>
+         <th>Review Count</th>
+         <th>Snippet Text</th>
+          <th>URL</th>
+         <th>population</th>
+         <th>Lat.</th>
+         <th>Lon.</th>
+        </tr>
+    </thead>
+          <tbody>
+        <tr>
+          <td>[[Burgers, burgers]]</td>
+          <td>Adelanto, CA</td>
+          <td>+1-760-246-4813</td>
+          <td>bravo-burgers-adelanto</td>
+          <td>False</td>
+          <td>False</td>
+          <td>https://m.yelp.com/biz/bravo-burgers-adelanto?...</td>
+         <td>Bravo Burgers</td>
+         <td>2.5</td>
+         <td>37</td>
+         <td>We had dinner at Bravo Burgers tonight...</td>
+         <td>https://www.yelp.com/biz/bravo-burgers-adel...</td>
+         <td>31,765</td>
+         <td>34.582769</td>
+         <td>-117.409214</td>
+       </tr>
+
+       <tr>
+         <td>[[[Tacos, tacos]]</td>
+         <td>Adelanto, CA</td>
+         <td>NaN</td>
+          <td>jds-tacos-adelanto-2</td>
+          <td>False</td>
+          <td>False</td>
+           <td>https://m.yelp.com/biz/jds-tacos-adelanto-2?ad...</td>
+           <td>Jds Tacos</td>
+           <td>5.0</td>
+            <td>1</td>
+            <td>Jds tacos coming soon on Friday we...</td>
+            <td>https://www.yelp.com/biz/jds-tacos-adelanto-2?...</td>
+            <td>31,765</td>
+            <td>34.582769</td>
+            <td>-117.409214</td>
+         </tr>
+
+         <tr>
+           <td>[Mexican, mexican]]</td>
+           <td>Adelanto, CA</td>
+            <td>+1-760-246-4751</td>
+            <td>miguelitos-family-restaurant-adelanto</td>
+            <td>False</td>
+            <td>False</td>
+            <td>https://m.yelp.com/biz/miguelitos-family-resta...</td>
+            <td>Miguelitos Family Restaurant</td>
+            <td>4.0</td>
+            <td>14</td>
+           <td>This is the place to come after a night...</td>
+            <td>https://www.yelp.com/biz/miguelitos-family-res...</td>
+           <td>31,765</td>
+           <td>34.582769</td>
+           <td>-117.409214</td>
+         </tr>
+         <tr>
+            <td>[[Thai, thai], [Chinese, chinese]]</td>
+            <td>Adelanto, CA</td>
+            <td>+1-760-246-8122</td>
+            <td>thai-siam-restaurant-adelanto</td>
+            <td>False</td>
+           <td>False</td>
+           <td>https://m.yelp.com/biz/thai-siam-restaurant-ad...</td>
+           <td>Thai-Siam Restaurant</td>
+           <td>4.5</td>
+           <td>42</td>
+           <td>So I wanted to listen to "In the Aero...</td>
+           <td>https://www.yelp.com/biz/thai-siam-restaurant-...</td>
+           <td>31,765</td>
+           <td>34.582769</td>
+           <td>-117.409214</td>
+         </tr>
+    </tbody>
+    </table>
+      </small>
+      <h2><strong><a name="Analysis"><span style="color: #DC143C">II. Analysis and Vistualization</span></a></strong></h2>
+        <p> Since we want our users to be able to track the different categories for their own personal needs, we used interactive plots to give the 
+          user a richer information experience.
+      </p>
+    <li><a href="#Restaurants">Restaurant</a></li>
+        <li><a href="#Hotels">Hotels</a></li>
+      <li><a href="#Landmarks">Landmarks</a></li>
+      
+        <small>Note: please allow some time for the interactive plots to load </small>
+      
+            <h3><a name="Restaurants"><span style="color: #DC143C">The Restaurant Category</span></a></h3>
+        
+            <div data-plotly="stephanielam/50" style="text-align: center; position: relative;">
+          <a href="https://plot.ly/~stephanielam/50/?share_key=cOiKyLK49MCvA7nM6d4T7X" target="_blank" title="Top 10 most frequent category of Restaurant" style="display: block; text-align: center;" data-plotly="stephanielam/50"><img src="https://plot.ly/~stephanielam/50.png?share_key=cOiKyLK49MCvA7nM6d4T7X" alt="Top 10 most frequent category of Restaurant" style="max-width: 100%;width: 500x;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/50"></a>
+        <script data-plotly="stephanielam:50" sharekey-plotly="cOiKyLK49MCvA7nM6d4T7X" src="https://plot.ly/embed.js" async=""></script>
+        </div>
+            <small> Since there are many different categories in restaurants, we will only focus on the top 10 most frequent cateogries. 
+          From this bar plot, we can see that Mexican food is the most popular cuisine.</small>
+        <br><small>Now, we need a plot to see how these categories are distributed in different ratings.</small>
+        <br>
+        <div data-plotly="stephanielam/88" style="text-align: center; position: relative;">
+         <a href="https://plot.ly/~stephanielam/88/?share_key=48vMzvfIe6iaoV3nMWWqsa" target="_blank" title="Rating stars distribution (by categeory) for Restaurant" style="display: block; text-align: center;" data-plotly="stephanielam/88"><img src="https://plot.ly/~stephanielam/88.png?share_key=48vMzvfIe6iaoV3nMWWqsa" alt="Rating stars distribution (by categeory) for Restaurant" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/88"></a>
+         <script data-plotly="stephanielam:88" sharekey-plotly="48vMzvfIe6iaoV3nMWWqsa" src="https://plot.ly/embed.js" async=""></script>
+        </div>
+          <small>We see that most of the restaurants have 4 stars rating or higher. Hence, we can tell that CA has pretty posh restaurants overall. </small>
+        <br>
+        <div data-plotly="stephanielam/54" style="text-align: center; position: relative;">
+         <a href="https://plot.ly/~stephanielam/54/?share_key=PKHXLPn4XduN79K2swuTK4" target="_blank" title="Restaurant average rating by city" style="display: block; text-align: center;" data-plotly="stephanielam/54"><img src="https://plot.ly/~stephanielam/54.png?share_key=PKHXLPn4XduN79K2swuTK4" alt="Restaurant average rating by city" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/54"></a>
+          <script data-plotly="stephanielam:54" sharekey-plotly="PKHXLPn4XduN79K2swuTK4" src="https://plot.ly/embed.js" async=""></script>
+        </div>
+          <small>In this map,The bigger dots indicate higher average review count. We see that most of the restaurants in different cities are between 4 and 4.5 stars. There is currently no city that has a average rating higher than 4.5.</small>
+      <br>
+          <small>We want the users to be able to look at where are the top 3 restaurants located by the cuisine they want. Therefore we created functions to extract the top 3 restaurants by cuisine and plot the locations on a map</small>
+      <div data-plotly="stephanielam/92" style="text-align: center; position: relative;">
+         <a href="https://plot.ly/~stephanielam/92/?share_key=AfHJE5iyESkFVLzfBsUQcy" target="_blank" title="Top 5 restaurant by category" style="display: block; text-align: center;" data-plotly="stephanielam/92"><img src="https://plot.ly/~stephanielam/92.png?share_key=AfHJE5iyESkFVLzfBsUQcy" alt="Top 5 restaurant by category" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/92"></a>
+         <script data-plotly="stephanielam:92" sharekey-plotly="AfHJE5iyESkFVLzfBsUQcy" src="https://plot.ly/embed.js" async=""></script>
+          </div>
+          <small>Most of the top 3 restaurants are located near San Francisco and the Los Angeles to San Diego area.</small>
+          
+        <h3><a name="Hotels"><span style="color: #DC143C">The Hotel Category</span></a></h3>
+          <div data-plotly="stephanielam/60" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/60/?share_key=7ay2cQ3TvYvKbg5Nj7RD4e" target="_blank" title="Top 10 most frequent category of Hotels" style="display: block; text-align: center;" data-plotly="stephanielam/60"><img src="https://plot.ly/~stephanielam/60.png?share_key=7ay2cQ3TvYvKbg5Nj7RD4e" alt="Top 10 most frequent category of Hotels" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/60"></a>
+            <script data-plotly="stephanielam:60" sharekey-plotly="7ay2cQ3TvYvKbg5Nj7RD4e" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small> From the dataframe we got from yelp, the Hotel category doesn't contain much varieties of category. Therefore, to better analysis the hotel data, we first restricted the data to those that are indeed Hotels, and look at the pie chart of the star distribution and map of average rating in each city.</small>
+        
+          <div data-plotly="stephanielam/62" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/62/?share_key=RMMeA9jBcHukLlwssHugku" target="_blank" title="star distribution in the category Hotels" style="display: block; text-align: center;" data-plotly="stephanielam/62"><img src="https://plot.ly/~stephanielam/62.png?share_key=RMMeA9jBcHukLlwssHugku" alt="star distribution in the category Hotels" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/62"></a>
+           <script data-plotly="stephanielam:62" sharekey-plotly="RMMeA9jBcHukLlwssHugku" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>From the pie chart, we can see that the majority of hotels are between 3 to 4 stars. There is only 3.04% of hotels are rated 5 stars while 26.7% are 3.5 stars.</small>
+      
+          <div data-plotly="stephanielam/64" style="text-align: center; position: relative;">
+            <a href="https://plot.ly/~stephanielam/64/?share_key=mqwPR85iKghWPnWuAVtFbO" target="_blank" title="Hotels average rating by city" style="display: block; text-align: center;" data-plotly="stephanielam/64"><img src="https://plot.ly/~stephanielam/64.png?share_key=mqwPR85iKghWPnWuAVtFbO" alt="Hotels average rating by city" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/64"></a>
+           <script data-plotly="stephanielam:64" sharekey-plotly="mqwPR85iKghWPnWuAVtFbO" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>Compared to the restaurants category, there are actually quite a lot of cities that has a average hotel rating between 1 - 3 stars. The only 2 red dots in the map: the dot in Exeter is very small and the average reviews count is only 14, indicating that even though it has a average 4.5 rating in the city, there might be just one hotel in the city. On the other hand, the hotels in Palm Spring is very nice because the average review count is very high.</small>
+      
+          <div data-plotly="stephanielam/98" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/98/?share_key=cI9VduRNP8rVawMkPj2gma" target="_blank" title="Top 5 hotels by category" style="display: block; text-align: center;" data-plotly="stephanielam/98"><img src="https://plot.ly/~stephanielam/98.png?share_key=cI9VduRNP8rVawMkPj2gma" alt="Top 5 hotels by category" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/98"></a>
+           <script data-plotly="stephanielam:98" sharekey-plotly="cI9VduRNP8rVawMkPj2gma" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>We grouped the hotels into different categories by finding the pattern within their name such as Hotel, Motel, or Inn. Same as the restaurant category, the map shows that most top hotels are located near San Francisco and LA-SD area. </small>
+        
+        <h3><a name="Landmarks"><span style="color: #DC143C">The Landmarks Category</span></a></h3>
+          <div data-plotly="stephanielam/70" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/70/?share_key=aB3IawLiB2oe0hz17zZrQ1" target="_blank" title="Top 10 most frequent category of Landmarks" style="display: block; text-align: center;" data-plotly="stephanielam/70"><img src="https://plot.ly/~stephanielam/70.png?share_key=aB3IawLiB2oe0hz17zZrQ1" alt="Top 10 most frequent category of Landmarks" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/70"></a>
+           <script data-plotly="stephanielam:70" sharekey-plotly="aB3IawLiB2oe0hz17zZrQ1" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <div data-plotly="stephanielam/72" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/72/?share_key=mhmxC6NojzPfwOjbgarPrK" target="_blank" title="star distribution in the category Landmarks" style="display: block; text-align: center;" data-plotly="stephanielam/72"><img src="https://plot.ly/~stephanielam/72.png?share_key=mhmxC6NojzPfwOjbgarPrK" alt="star distribution in the category Landmarks" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/72"></a>
+           <script data-plotly="stephanielam:72" sharekey-plotly="mhmxC6NojzPfwOjbgarPrK" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>From the pie chart, most landmarks seem to have high rating, ranged from 4 to 5 stars.</small>
+          <small>Since we focused on only the landmarks and historical buildings category and there is no pattern in their names, we will find and plot the top 10 landmarks in California instead.</small>
+      <div data-plotly="stephanielam/74" style="text-align: center; position: relative;">
+           <a href="https://plot.ly/~stephanielam/74/?share_key=ZMUO7gT94dprgwolTKffsL" target="_blank" title="Landmarks average rating by city" style="display: block; text-align: center;" data-plotly="stephanielam/74"><img src="https://plot.ly/~stephanielam/74.png?share_key=ZMUO7gT94dprgwolTKffsL" alt="Landmarks average rating by city" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/74"></a>
+            <script data-plotly="stephanielam:74" sharekey-plotly="ZMUO7gT94dprgwolTKffsL" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>From the previous plot and this map, we see that landmarks have dramatically more cities that are highly-rated. And most of them also have high average review count.</small>
+        <div data-plotly="stephanielam/100" style="text-align: center; position: relative;">
+            <a href="https://plot.ly/~stephanielam/100/?share_key=6Z1se5qoAFJNpk6lLZyvQn" target="_blank" title="Top 10 Landmarks" style="display: block; text-align: center;" data-plotly="stephanielam/100"><img src="https://plot.ly/~stephanielam/100.png?share_key=6Z1se5qoAFJNpk6lLZyvQn" alt="Top 10 Landmarks" style="max-width: 100%;width: 500px;" width="500" onerror="this.onerror=null;this.src='https://plot.ly/404.png';" data-plotly="stephanielam/100"></a>
+           <script data-plotly="stephanielam:100" sharekey-plotly="6Z1se5qoAFJNpk6lLZyvQn" src="https://plot.ly/embed.js" async=""></script>
+      </div>
+          <small>Different than the restaurant and hotel category, out of the 10 top landmarks, half of them are located in San Francisco while Los Angeles does not have any.</small>
+
+
+  <h2><strong><a name="ReviewAnalysis"><span style="color: #DC143C">III. Review Analysis</span></a></strong></h2>
+      <p>By using natural language processing, we analyzed the reviews from the Yelp API and find the common words that are used in the review by analyzing the best rated nearby restaurants, hotels, landmarks for all the cities in California. The results are shown below: </p>
+  
+      <p><span style="color: #FF5595"> For restaurants: </span></p>  
+    <img src="../style/part4_rest.png" alt="Number of counts of most occurring words in restaurants" style="width:304px;height:228px;">
+    <img src="../style/part4_restb.png" alt="Most commonly occurring words in restaurants" style="width:304px;height:228px;">
+    <small><li>The restaurants with higher rating tend to have greater food quality, more friendly customer service and great time management</li>
+                <li>Chicken seems to be popular in the high rated restaurants.</li>
+        </small>
+      
+      <p><span style="color: #FF5595">For Hotels: </span></p>  
+        <img src="../style/part4_hotel.png" alt="Number of counts of most occurring wordsin hotels" style="width:304px;height:228px;">
+    <img src="../style/part4_hotelb.png" alt="Most commonly occurring words in hotels" style="width:304px;height:228px;">
+    <small><li>The hotels with higher ratings tends to provide a cleaner environment, and more friendly customer service.</li>
+            <li>The customers also discuss the breakfast quality more often than other meals.</li>
+        </small>
+      
+      <p><span style="color: #FF5595">For Landmarks: </span></p>  
+        <img src="../style/part4_landmarks.png" alt="Number of counts of most occurring words in landmarks" style="width:304px;height:228px;">
+      <img src="../style/part4_landmarksb.png" alt="Most commonly occurring words in landmarks" style="width:304px;height:228px;">
+      <small><li>The landmarks with higher ratings tends to have a great and beautiful environment, and an amazing view.</li>
+              <li>Some examples of landmarks are parks and historic landmarks.</li>
+          </small>
+      
+  <h2><strong><a name="User Input"><span style="color: #DC143C">IV. Interactive User Input</span></a></strong></h2>
+      <p>With the application of interactive user input functions, we will try to provide a basic info of the city and best recommendations of restaurants, hotels and landmarks to the user by extracting informations from the Wikipedia. Below is the sample results we got with our input functions: </p>
+      
+      <small><strong>Sample User Input: </strong></small>
+      <pre><code><strong>Please enter the city that you want to visit: </strong>san fransicso</code></pre>
+     
+      <small><strong>Sample User Output: </strong></small>
+      <pre><code>Welcome to the city of San Francisco! We are excited to provide you an ideal travel guide to help you explore this wonderful city!
+      <br>Here is some basic info of the city of San Francisco!
+      <br>San Francisco (SF) (/sæn frənˈsɪskoʊ/, Spanish for Saint Francis; Spanish: [san fran.ˈθis.ko]), officially the City and County of San Francisco, is the cultural, commercial, and financial center of Northern California. It is the birthplace of the United Nations.[23][24][25] Located at the north end of the San Francisco Peninsula, San Francisco is about 47.9 square miles (124 km2)[17] in area, making it the smallest county—and the only consolidated city-county[26]—within the state of California. With a density of about 18,451 people per square mile (7,124 people per km2), San Francisco is the most densely settled large city (population greater than 200,000) in California and the second-most densely populated major city in the United States after New York City.[27] San Francisco is the fourth-most populous city in California, after Los Angeles, San Diego, and San Jose, and the 13th-most populous city in the United States—with a census-estimated 2015 population of 864,816.[20] The city and its surrounding areas are known as the San Francisco Bay Area, and are a part of the larger OMB-designated San Jose-San Francisco-Oakland combined statistical area, the fifth most populous in the nation with an estimated population of 8.7 million.</code></pre>
+      
+      <small><table>
+        <thead>
+        <tr>
+       <th>info</th>
+        </tr>
+    </thead>
+          <tbody>
+    <tr>
+           <td>Motto: Oro en Paz, Fierro en Guerra (Spanish) ...</td></tr>
+      <tr><td>State : California</td></tr>
+      <tr><td>CSA : San Jose–San Francisco–Oakland</td></tr>
+      <tr><td>Metro : San Francisco–Oakland–Hayward</td></tr>
+      <tr><td>Incorporated : April 15, 1850</td></tr>
+      <tr><td>Founded by : José Joaquin Moraga : Francisco P...</td></tr>
+      <tr><td>Named for : St. Francis of Assisi</td></tr>
+      <tr><td>Type : Mayor-council</td></tr>
+      <tr><td>Body : Board of Supervisors</td></tr>
+      <tr><td>Mayor : Edwin M. Lee (D)</td></tr>
+      <tr><td>Supervisors : List : Sandra Lee Fewer (D) : Ma...</td></tr>
+      <tr><td>Assembly members : David Chiu (D) : Phil Ting (D)</td></tr>
+      <tr><td>State senator : Scott Wiener (D)</td></tr>
+      <tr></tr><tr><td>United States Representatives : Nancy Pelosi (...</td></tr>
+      <tr><td>City and county : 231.89 sq mi (600.6 km2)</td></tr>
+      <tr><td>Land : 46.87 sq mi (121.4 km2)</td></tr>
+      <tr><td>Water : 185.02 sq mi (479.2 km2)  80.00%</td></tr>
+      <tr><td>Metro : 3,524.4 sq mi (9,128 km2)</td></tr>
+      <tr><td>City and county : 864,816</td></tr>
+      <tr><td>Rank : 13th, U.S.</td></tr>
+      <tr><td>Density : 18,451/sq mi (7,124/km2)</td></tr>
+      <tr><td>Metro : 4,656,132 (11th)</td></tr>
+      <tr><td>CSA : 8,713,914 (5th)</td></tr>
+      <tr><td>Summer (DST) : Pacific Daylight Time (UTC−7)</td></tr>
+      <tr><td>Area codes : 415/628</td></tr>
+      <tr><td>GNIS feature IDs : 277593, 2411786</td>
+         </tr>
+    </tbody>
+    </table>
+      </small>
+      <br>
+      <small><strong>Sample Input: </strong></small>
+      <pre><code><strong>Which accommondation do you want us to recommend? For example, restaurants, hotels or landmarks: </strong> restaurants
+      <br><strong>What is your favorite kinds of food? </strong> chinese
+      <br><strong>What is your preferred range of rating for restaurants?</strong> 1,4 </code></pre>
+      <small><p><strong>Sample Ouput: </strong></p></small>
+      <pre><code>You enter City: San Francisco, CA, Restaurant Category: Chinese, Lower_bound Rating: 1, Upper_bound Rating: 4 <br>We are sorry. We can not find a restaurant that meets your criterias in our database. Please try a different kinds of food or rating. But first, let's look at the TOP 5 alternatives that we find.</code></pre>
+     
+      <small><table>
+        <thead>
+        <tr>
+          <th>categories</th>
+          <th>city</th>
+         <th>name</th>
+         <th>rating</th>
+         <th>review_count</th>
+         <th>snippet_text</th>
+          <th>url</th>
+        </tr>
+    </thead>
+          <tbody>
+        <tr>
+          <td>Ramen</td>
+          <td>San Francisco, CA</td>
+          <td>Hinodeya Ramen Bar</td>
+          <td>4.0</td>
+          <td>182</td>
+          <td>Yum. Another ramen bar! With, of course, a wai...</td>
+          <td>https://www.yelp.com/biz/hinodeya-ramen-bar-sa...</td>
+       </tr>
+
+        <tr>
+          <td>Ramen</td>
+          <td>San Francisco, CA</td>
+          <td>Nojo Ramen Tavern</td>
+          <td>4.0</td>
+          <td>230</td>
+          <td>There was no wait for lunch on a weekend. The ...</td>
+          <td>https://www.yelp.com/biz/nojo-ramen-tavern-san...</td>
+       </tr>
+
+        <tr>
+          <td>Japanese</td>
+          <td>San Francisco, CA</td>
+          <td>Kui Shin Bo</td>
+          <td>4.0</td>
+          <td>478</td>
+          <td>At this point the wife and I have been out of ...</td>
+          <td>https://www.yelp.com/biz/kui-shin-bo-san-franc...</td>
+       </tr>
+      
+        <tr>
+          <td>Cocktail Bars</td>
+          <td>San Francisco, CA</td>
+          <td>Horsefeather</td>
+          <td>4.0</td>
+          <td>82</td>
+          <td>Solid place for reasonably priced fancy cockta...</td>
+          <td>https://www.yelp.com/biz/horsefeather-san-fran...</td>
+       </tr>
+       <tr>
+          <td>Seafood</td>
+          <td>San Francisco, CA</td>
+          <td>Fog Harbor Fish House</td>
+          <td>4.0</td>
+          <td>2920</td>
+          <td>First I have to tell you that I usually don't ...</td>
+          <td>https://www.yelp.com/biz/fog-harbor-fish-house...</td>
+       </tr>
+      
+    </tbody>
+        </table></small>
+     
+      
+      <br>
+      
+  <h2><strong><a name="Next Step"><span style="color: #DC143C">Conclusion &amp; Next Step</span></a></strong></h2>
+      <p>Our next step of our travel guide would be creating a server-side framework like flask to create a website that could actually get the user inputs and display corresponding 
+        outputs and plots relative to whatever the users need.</p>
+        
+  <h2><strong><a name="Codes"><span style="color: #DC143C">Code</span></a></strong></h2>
+      <p>The links below are the html form of project jupyter notebooks, each file would include the codes and results that we used in the project. </p>    
+      <ul>
+      <li><a href="../Projects/Part_I_Data+Wrangling.html" target="_self">Part I: Data Wrangling</a></li>
+      <li><a href="../Projects/Part+II_Query+Database (1).html" target="_self">Part II: Analysis and Vistualization</a></li>
+      <li><a href="../Projects/Part_III_Review_Analysis.html" target="_self">Part III: Review Analysis</a></li>
+      <li><a href="../Projects/Part_IV_Basic_Info.html" target="_self">Part IV: Interactive User Input</a></li>
+        
+      <br><a href="https://github.com/chloechen1995/STA-141B-Project.github.io">Project Github Repository</a>
+  </ul></section>
